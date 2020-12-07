@@ -9,7 +9,7 @@ export default function Banner () {
       <div className='intro-image d-none d-xl-block'>
         <Image src='/images/banner-unidad.png' alt='Unidad.cl' layout='fill' objectFit='contain' />
       </div>
-      <div className='intro-block d-none d-xl-block'>
+      <div className='intro-block d-none d-xl-flex'>
         <div className='number'>
           <span>25</span>
         </div>
