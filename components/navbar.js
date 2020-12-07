@@ -68,6 +68,14 @@ export default function Navbar () {
                 <a className='nav-link'>Tratamientos</a>
               </Link>
             </li>
+            <li className={cx('nav-item', {
+              active: router.pathname === '/programa-trad-2021'
+            })}
+            >
+              <Link href='/programa-trad-2021'>
+                <a className='nav-link'>Programa TRAD 2021</a>
+              </Link>
+            </li>
           </ul>
         </Collapse>
       </div>

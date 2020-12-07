@@ -9,7 +9,7 @@ import Contact from 'components/home/contact'
 export default function Home () {
   return (
     <Page>
-      <Spacer height='110' />
+      <Spacer height='110' background='var(--ns-bg-secondary)' />
       <main>
         <Intro />
         <About />

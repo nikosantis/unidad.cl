@@ -15,6 +15,7 @@ export default css.global`
     --ns-orange: #ea7600;
     --ns-orange-hover: #9c4e00;
     --ns-blue: #002f6c;
+    --ns-blue-hover: #00193B;
     --ns-background: #fff;
     --ns-intro-bg: #ccc;
     --ns-footer-background: #394049;

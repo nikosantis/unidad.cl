@@ -20,7 +20,6 @@ export default function About () {
         {`
           .about {
             padding: 90px 0;
-            background-color: var(--ns-bg-secondary);
           }
           h2 {
             font-size: 2rem;

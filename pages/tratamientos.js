@@ -2,6 +2,7 @@ import Page from 'components/page'
 import Footer from 'components/footer'
 import Spacer from 'components/spacer'
 import ExternalLink from 'components/external-link'
+import Contact from 'components/tratamientos/contact'
 
 export default function Tratamientos () {
   return (
@@ -79,6 +80,7 @@ export default function Tratamientos () {
             </div>
           </div>
         </section>
+        <Contact />
       </main>
       <Footer />
       <style jsx>

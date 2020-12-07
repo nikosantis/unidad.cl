@@ -1,4 +1,4 @@
-export default function Spacer ({ height }) {
+export default function Spacer ({ height, background }) {
   return (
     <div>
       <style jsx>
@@ -6,6 +6,7 @@ export default function Spacer ({ height }) {
           div {
             height: ${height}px;
             display: block;
+            background-color: ${background || 'var(--ns-bg)'};
           }
         `}
       </style>

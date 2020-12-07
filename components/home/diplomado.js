@@ -14,7 +14,7 @@ export default function Diplomado () {
             <h3>Psicoterapia para el Tratamiento de abuso de alcohol y drogas</h3>
             <h4>Aproximación Neuroafectiva Constructivista</h4>
             <div className='link'>
-              <ExternalLink href='https://diplomadopsicoterapia.cl/' text='Más Información' />
+              <ExternalLink href='https://diplomadopsicoterapia.cl/' text='Más Información' className='btn-usach' />
             </div>
           </div>
         </div>
