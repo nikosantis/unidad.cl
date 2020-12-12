@@ -1,6 +1,7 @@
 import 'styles/bootstrap.css'
 import baseStyles from 'styles/base'
 import fontsStyles from 'styles/fonts'
+import WhatsApp from 'components/whatsapp'
 
 function MyApp ({ Component, pageProps }) {
   return (
@@ -12,6 +13,7 @@ function MyApp ({ Component, pageProps }) {
         {baseStyles}
       </style>
       <Component {...pageProps} />
+      <WhatsApp />
     </>
   )
 }

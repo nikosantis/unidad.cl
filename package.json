@@ -11,6 +11,7 @@
     "@sendgrid/mail": "^7.4.0",
     "bootstrap": "^4.5.3",
     "classnames": "^2.2.6",
+    "luxon": "^1.25.0",
     "mongoose": "^5.11.7",
     "next": "10.0.3",
     "react": "17.0.1",

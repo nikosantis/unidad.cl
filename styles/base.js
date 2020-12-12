@@ -19,5 +19,20 @@ export default css.global`
     --ns-background: #fff;
     --ns-intro-bg: #ccc;
     --ns-footer-background: #394049;
+
+    /* Chat WhatsApp */
+    --ns-color-wsp: #25d366;
+    --shadow-smallest: 0px 4px 8px rgba(0, 0, 0, 0.12);
+    --message-primary: #303030;
+    --incoming-background: #fff;
+    --shadow-rgb: 0,0,0;
+    --bubble-meta: rgba(0, 0, 0, 0.45);
+    --compose-panel-background: #f0f0f0;
+    --rich-text-panel-background: #f0f0f0;
+    --border-stronger: rgba(0, 0, 0, 0.08);
+    --compose-primary: #4a4a4a;
+    --input-placeholder: #999;
+    --compose-input-background: #fff;
+    --compose-input-border: #fff;
   }
 `

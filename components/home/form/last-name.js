@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { lastNameSchema } from 'validations/contact.validation'
 import { useFormState, useFormDispatch } from 'contexts/form-context'
-import { useValidation } from 'hooks/useValidation'
+import { useValidation } from 'hooks/use-validation'
 
 function LastName () {
   const { lastName } = useFormState()

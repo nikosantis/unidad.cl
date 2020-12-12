@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { emailSchema } from 'validations/contact.validation'
 import { useFormState, useFormDispatch } from 'contexts/form-context'
-import { useValidation } from 'hooks/useValidation'
+import { useValidation } from 'hooks/use-validation'
 
 function Email () {
   const { email } = useFormState()
