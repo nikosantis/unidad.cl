@@ -4,6 +4,7 @@ import Spacer from 'components/spacer'
 import Intro from 'components/home/intro'
 import About from 'components/home/about'
 import Diplomado from 'components/home/diplomado'
+import FormacionTecnica from 'components/home/formacion-tecnica'
 import Contact from 'components/home/contact'
 
 export default function Home () {
@@ -14,6 +15,7 @@ export default function Home () {
         <Intro />
         <About />
         <Diplomado />
+        <FormacionTecnica />
         <Contact />
       </main>
       <Footer />

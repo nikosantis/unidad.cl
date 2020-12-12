@@ -6,7 +6,7 @@ import { useValidation } from 'hooks/useValidation'
 function LastName () {
   const { lastName } = useFormState()
   const { setValue } = useFormDispatch()
-  const isValid = useValidation(lastNameSchema, lastName)
+  const isValid = useValidation(lastNameSchema, { lastName })
 
   return (
     <>

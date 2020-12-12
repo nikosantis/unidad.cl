@@ -57,12 +57,12 @@ export default function Diplomado () {
             color: var(--ns-blue);
             text-transform: uppercase;
             font-weight: 600;
-            font-size: 2rem;
+            font-size: 1.5rem;
             text-align: center;
             position: relative;
             z-index: 2;
             @media (min-width: 768px) {
-              font-size: 2.5rem;
+              font-size: 2rem;
               text-align: left;
             }
           }
@@ -79,7 +79,7 @@ export default function Diplomado () {
               text-align: left;
             }
             @media (min-width: 992px) {
-              font-size: 2rem;
+              font-size: 1.7rem;
               text-align: left;
             }
           }

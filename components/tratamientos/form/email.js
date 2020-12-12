@@ -6,7 +6,7 @@ import { useValidation } from 'hooks/useValidation'
 function Email () {
   const { email } = useFormState()
   const { setValue } = useFormDispatch()
-  const isValid = useValidation(emailSchema, email)
+  const isValid = useValidation(emailSchema, { email })
 
   return (
     <>

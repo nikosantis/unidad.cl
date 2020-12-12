@@ -1,18 +1,18 @@
 import Page from 'components/page'
 import Footer from 'components/footer'
 import Spacer from 'components/spacer'
-import Contact from 'components/programa-trad-2021/contact'
+import Contact from 'components/formacion-tecnica/contact'
 
-export default function ProgramaTrad2021 () {
+export default function FormacionTecnica () {
   return (
-    <Page title='Programa TRAD 2021 | Unidad de Adicciones' description='Programa TRAD 2021. Unidad de Adicciones de la Universidad de Santiago de Chile. Tratamiento de adicciones, drogas y drogadicción.'>
+    <Page title='Formación Técnica | Unidad de Adicciones' description='Formación Técnica. Unidad de Adicciones de la Universidad de Santiago de Chile. Tratamiento de adicciones, drogas y drogadicción.'>
       <Spacer height='110' />
       <main>
         <section className='intro'>
           <div className='container'>
             <div className='row'>
               <div className='col-lg-12'>
-                <h1>Programa TRAD 2021</h1>
+                <h1>Formación Técnica</h1>
                 <h5>Técnico en Prevención y Rehabilitación de Personas con Dependencia a Drogas</h5>
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function ProgramaTrad2021 () {
                 <p>Sra. Nury Herdocio Peralta. Dra. en Ciencias Biológicas de la Universidad de Barcelona, España.</p>
                 <p>Sr. Juan Echegaray Taborga. Dr. en Ciencias Biológicas de la Universidad Autónoma de Barcelona, España.</p>
                 <br />
-                <p><b>Psicología General y Técnicas Integrativas de Rehabilitació:</b></p>
+                <p><b>Psicología General y Técnicas Integrativas de Rehabilitación:</b></p>
                 <p>Sr. Javier Guajardo Godoy – Psicólogo, Magister en Psicología Clínica, mención psicoterapia integrativa, Universidad Adolfo Ibáñez. Director Centro de Adolescentes CIAD</p>
                 <br />
                 <p><b>Comunidad Terapéutica:</b></p>
@@ -113,7 +113,7 @@ export default function ProgramaTrad2021 () {
                 <br />
                 <p><b>Psicopatología y Técnicas de Terapia en Adicciones:</b></p>
                 <p>Prof. Dr. Humberto Guajardo Sáinz, Médico Psiquiatra. Director de Postgrado de la Facultad de Ciencias Médicas de la Universidad de Santiago.</p>
-                <p>Ps. Diana Kushner Lániz. Antropólga social. Magister en Psicoterapia Cognitiva Posracionaliesta, USACH, Profesora en Prevención y Rehabilitación de Drogas de la Facultad de Ciencias Médicas de la Universidad de Santiago.</p>
+                <p>Ps. Diana Kushner Lanis. Psicóloga. Magister en Psicoterapia Cognitiva Posracionaliesta, USACH, Profesora en Prevención y Rehabilitación de Drogas de la Facultad de Ciencias Médicas de la Universidad de Santiago.</p>
                 <br />
                 <p><b>Coordinadora Académica:</b></p>
                 <p>Sra. Melissa Diaz Cruz</p>

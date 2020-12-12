@@ -17,25 +17,14 @@ export default function Contact () {
           <div className='col-lg-6 mb-5 mb-lg-0'>
             <p>Utiliza nuestros canales de contacto o por medio del formulario de contacto</p>
             <div className='contact-info'>
-              <p>Claudia Miranda Zúñiga</p>
+              <p>Mylenne Monard</p>
               <div className='contact-data'>
                 <span className='icon'><FaRegEnvelope /></span>
-                <span className='link'><a href='mailto:claudia.miranda.z@usach.cl'>claudia.miranda.z@usach.cl</a></span>
+                <span className='link'><a href='mailto:secretaria@ciad.cl'>secretaria@ciad.cl</a></span>
               </div>
               <div className='contact-data'>
                 <span className='icon'><FaMobileAlt /></span>
-                <span className='link'><a href='tel:+56961742890'>+56 9 6174 2890</a></span>
-              </div>
-            </div>
-            <div className='contact-info'>
-              <p>Melissa Diaz Cruz</p>
-              <div className='contact-data'>
-                <span className='icon'><FaRegEnvelope /></span>
-                <span className='link'><a href='mailto:melissa.diaz@usach.cl'>melissa.diaz@usach.cl</a></span>
-              </div>
-              <div className='contact-data'>
-                <span className='icon'><FaMobileAlt /></span>
-                <span className='link'><a href='tel:++56961640345'>+56 9 6164 0345</a></span>
+                <span className='link'><a href='tel:+56222254444'>+56 2 2225 4444</a></span>
               </div>
             </div>
           </div>

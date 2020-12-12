@@ -6,7 +6,7 @@ import { useValidation } from 'hooks/useValidation'
 function Phone () {
   const { phone } = useFormState()
   const { setValue } = useFormDispatch()
-  const isValid = useValidation(phoneSchema, phone)
+  const isValid = useValidation(phoneSchema, { phone })
 
   return (
     <>

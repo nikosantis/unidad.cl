@@ -56,7 +56,7 @@ export default function Navbar () {
               </Link>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='https://diplomadopsicoterapia.cl/'>
+              <a className='nav-link' href='https://diplomadopsicoterapia.cl/' target='_blank' rel='noreferrer'>
                 Diplomado
               </a>
             </li>
@@ -69,11 +69,11 @@ export default function Navbar () {
               </Link>
             </li>
             <li className={cx('nav-item', {
-              active: router.pathname === '/programa-trad-2021'
+              active: router.pathname === '/formacion-tecnica'
             })}
             >
-              <Link href='/programa-trad-2021'>
-                <a className='nav-link'>Programa TRAD 2021</a>
+              <Link href='/formacion-tecnica'>
+                <a className='nav-link'>Formación Técnica</a>
               </Link>
             </li>
           </ul>

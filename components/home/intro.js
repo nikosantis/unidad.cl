@@ -7,29 +7,41 @@ export default function Intro () {
       <div className='container'>
         <div className='row justify-content-center justify-content-lg-center justify-content-xl-start'>
           <div className='col-md-10 col-lg-10 col-xl-6'>
-            <h5>Somos Unidad de Adicciónes</h5>
+            <h5>Somos Unidad de Adicciones</h5>
             <h1>
-              Profesionales en Conocimiento e Investigación al servicio del Tratamiento y Adicciones
+              Profesionales en Conocimiento e Investigación al servicio del
+              Tratamiento y Adicciones
             </h1>
             <div className='intro-list'>
               <ul className='d-none d-xl-block'>
                 <li>Diplomado en Psicoterapia</li>
-                <li>Tratamiento para pacientes con Transtorno por Abuso de Acohol y Drogras</li>
-                <li>Programa TRAD</li>
+                <li>
+                  Tratamiento para pacientes con Trastorno por Abuso de Alcohol
+                  y Drogas
+                </li>
+                <li>Programa Formación Técnica</li>
               </ul>
               <div className='d-block d-xl-none'>
                 <p>Diplomado en Psicoterapia</p>
-                <p>Tratamiento para pacientes con Transtorno por Abuso de Acohol y Drogras</p>
-                <p>Programa TRAD</p>
+                <p>
+                  Tratamiento para pacientes con Trastorno por Abuso de Alcohol
+                  y Drogas
+                </p>
+                <p>Programa Formación Técnica</p>
               </div>
             </div>
             <div className='intro-links'>
               <Link href='/tratamientos'>
-                <a className='btn btn-blue'>Tratamientos</a>
+                <a className='btn btn-orange'>Tratamientos</a>
               </Link>
-              <a href='https://diplomadopsicoterapia.cl/' className='btn btn-orange'>Tratamientos</a>
-              <Link href='/programa-trad-2021'>
-                <a className='btn btn-orange'>Programa Técnico</a>
+              <a
+                href='https://diplomadopsicoterapia.cl/'
+                className='btn btn-orange'
+              >
+                Diplomado
+              </a>
+              <Link href='/formacion-tecnica'>
+                <a className='btn btn-orange'>Formación Técnica</a>
               </Link>
             </div>
           </div>
@@ -40,7 +52,7 @@ export default function Intro () {
         {`
           .intro {
             padding: 95px 0;
-            background-color: var(--ns-bg-secondary);
+            background-color: var(--ns-intro-bg);
             position: relative;
           }
           h5 {
@@ -96,7 +108,7 @@ export default function Intro () {
           }
           .intro-links {
             display: flex;
-            :global(.btn){
+            :global(.btn) {
               margin-right: 10px;
             }
             justify-content: center;
@@ -117,7 +129,7 @@ export default function Intro () {
 
             &:disabled {
               color: #fff;
-              opacity: .5;
+              opacity: 0.5;
               cursor: not-allowed;
             }
           }
@@ -134,7 +146,7 @@ export default function Intro () {
 
             &:disabled {
               color: #fff;
-              opacity: .5;
+              opacity: 0.5;
               cursor: not-allowed;
             }
           }
