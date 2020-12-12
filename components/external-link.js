@@ -3,7 +3,10 @@ import cx from 'classnames'
 export default function ExternalLink ({ href, text, className }) {
   return (
     <a
-      href={href} className={cx('btn', className)}
+      href={href}
+      className={cx('btn', className)}
+      target='_blank'
+      rel='noreferrer'
     >
       {text}
       <style jsx>
