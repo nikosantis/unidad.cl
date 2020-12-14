@@ -58,7 +58,7 @@ export default function Tratamientos () {
                   Para más información:
                 </p>
                 <div className='link'>
-                  <ExternalLink href='https://www.ciad.cl/' text='Centro Investigación y Atención Drogodependencias' />
+                  <ExternalLink href='https://www.ciad.cl/' text='Centro Investigación y Atención Drogodependencias' className='btn-usach' />
                 </div>
                 <h2>Modalidades</h2>
                 <p>

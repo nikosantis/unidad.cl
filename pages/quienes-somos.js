@@ -12,7 +12,7 @@ export default function QuienesSomos () {
           <div className='container'>
             <div className='row'>
               <div className='col-lg-12'>
-                <h1>¡Bienvenidos a Unidad.cl!</h1>
+                <h1>Bienvenidos a Unidad de Adicciones</h1>
                 <h3>“Conocimiento e investigación al servicio del tratamiento en Adicciones”</h3>
               </div>
             </div>
