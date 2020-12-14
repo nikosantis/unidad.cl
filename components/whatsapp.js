@@ -1,7 +1,7 @@
 import { useCallback, useRef } from 'react'
 import { useModal } from 'hooks/use-modal'
 import { FaWhatsapp } from 'react-icons/fa'
-import OpenWhatsApp from 'components/openWhatsapp'
+import OpenWhatsApp from 'components/open-whatsapp'
 
 export default function WhatsApp () {
   const { active, open, close } = useModal()

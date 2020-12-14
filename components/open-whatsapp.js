@@ -1,6 +1,7 @@
 import { useRef, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import { DateTime } from 'luxon'
+import { createEvent } from 'lib/tagmanager'
 import Portal from 'components/portal'
 import ChatIcon from 'components/icons/chat'
 
@@ -61,7 +62,9 @@ function Wrapper ({ active, handleClose, wsp }) {
   }, [outsideClick, active])
 
   const handleEvent = useCallback(() => {
-    console.log('abrir wsp')
+    createEvent({
+      event: 'wspClicked'
+    })
   }, [])
 
   return (

@@ -1,4 +1,5 @@
 import { useFormState, useFormDispatch } from 'contexts/form-context'
+import { createEvent } from 'lib/tagmanager'
 import FirstName from './form/first-name'
 import LastName from './form/last-name'
 import Email from './form/email'
@@ -28,7 +29,7 @@ export default function Form () {
         email: state.email,
         comment: state.comment,
         form: 'Formulario Contacto Tratamientos',
-        mailTo: 'nikosantis@gmail.com',
+        mailTo: 'secretaria@ciad.cl',
         mailCc: 'tamara.silva@usach.cl'
       })
     })
@@ -37,6 +38,10 @@ export default function Form () {
     if (res.status === 200) {
       setValue('loading', false)
       reset()
+      createEvent({
+        event: 'submitOk',
+        form: 'Formulario Contacto Tratamientos'
+      })
       setValue('msg', text.message)
     } else {
       setValue('loading', false)
