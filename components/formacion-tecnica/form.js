@@ -28,7 +28,7 @@ export default function Form () {
         email: state.email,
         comment: state.comment,
         form: 'Formulario Contacto Formación Técnica',
-        mailTo: 'nikosantis@gmail.com',
+        mailTo: 'melissa.diaz@usach.cl',
         mailCc: 'tamara.silva@usach.cl'
       })
     })
@@ -69,20 +69,16 @@ export default function Form () {
         </div>
         <Submit />
       </form>
-      {
-        state.msg && (
-          <div className='alert alert-success' role='alert'>
-            {state.msg}
-          </div>
-        )
-      }
-      {
-        state.error && (
-          <div className='alert alert-danger' role='alert'>
-            {state.error}
-          </div>
-        )
-      }
+      {state.msg && (
+        <div className='alert alert-success' role='alert'>
+          {state.msg}
+        </div>
+      )}
+      {state.error && (
+        <div className='alert alert-danger' role='alert'>
+          {state.error}
+        </div>
+      )}
       <style jsx>
         {`
           .contact-wrapper {
