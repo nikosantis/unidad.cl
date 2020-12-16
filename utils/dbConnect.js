@@ -3,12 +3,10 @@ import mongoose from 'mongoose'
 const connection = {}
 
 async function dbConnect () {
-  /* check if we have connection to our databse */
   if (connection.isConnected) {
     return
   }
 
-  /* connecting to our database */
   const db = await mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,

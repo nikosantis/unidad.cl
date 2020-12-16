@@ -6,10 +6,19 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
 
 export default async (req, res) => {
   const { body, method } = req
+  await dbConnect()
 
   if (method === 'POST') {
     try {
-      await dbConnect()
+      await Contact.create({
+        first_name: body.firstName,
+        last_name: body.lastName,
+        phone: body.phone,
+        email: body.email,
+        comment: body.comment,
+        form: body.form
+      })
+
       await sendgrid.send({
         to: body.mailTo,
         cc: body.mailCc,
@@ -27,14 +36,6 @@ export default async (req, res) => {
             <p>Mensaje enviado desde el landing <a href='https://unidad.cl/'>https://unidad.cl/</a></p>
           </div>
         `
-      })
-      await Contact.create({
-        first_name: body.firstName,
-        last_name: body.lastName,
-        phone: body.phone,
-        email: body.email,
-        comment: body.comment,
-        form: body.form
       })
       res.status(200).json({ message: 'Mensaje enviado. Pronto nos contactaremos con usted.' })
     } catch (error) {
