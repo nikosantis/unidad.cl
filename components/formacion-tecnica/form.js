@@ -28,7 +28,7 @@ export default function Form () {
         email: state.email,
         comment: state.comment,
         form: 'Formulario Contacto Formación Técnica',
-        mailTo: 'melissa.diaz@usach.cl',
+        mailTo: 'claudia.miranda.z@usach.cl',
         mailCc: 'tamara.silva@usach.cl'
       })
     })
