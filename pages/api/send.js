@@ -27,7 +27,7 @@ export default async (req, res) => {
         text: `${body.form} Unidad.cl`,
         html: `
           <div>
-            <p><b>Formulario ${body.form}</b></p>
+            <p><b>Formulario: </b>${body.form}</p>
             <p><b>Nombre: </b>${body.firstName}</p>
             <p><b>Apellido: </b>${body.lastName}</p>
             <p><b>Correo Electrónico: </b>${body.email}</p>
