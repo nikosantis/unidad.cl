@@ -9,14 +9,15 @@
   },
   "dependencies": {
     "@sendgrid/mail": "^7.4.0",
-    "bootstrap": "^4.5.3",
+    "bootstrap": "4.6.0",
     "classnames": "^2.2.6",
     "luxon": "^1.25.0",
     "mongoose": "^5.11.7",
-    "next": "10.0.3",
+    "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^4.1.0",
+    "react-scroll": "^1.8.1",
     "react-transition-group": "^4.4.1",
     "yup": "^0.32.1"
   },

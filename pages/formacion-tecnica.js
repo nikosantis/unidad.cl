@@ -1,18 +1,20 @@
 import Page from 'components/page'
 import Footer from 'components/footer'
 import Spacer from 'components/spacer'
+import Intro from 'components/formacion-tecnica/intro'
 import Contact from 'components/formacion-tecnica/contact'
 
 export default function FormacionTecnica () {
   return (
     <Page title='Formación Técnica | Unidad de Adicciones' description='Formación Técnica. Unidad de Adicciones de la Universidad de Santiago de Chile. Tratamiento de adicciones, drogas y drogadicción.'>
-      <Spacer height='110' />
+      <Spacer height='106' />
+      <Intro />
       <main>
         <section className='intro'>
           <div className='container'>
             <div className='row'>
               <div className='col-lg-12'>
-                <h1>Formación Técnica</h1>
+                <h3>Formación Técnica</h3>
                 <h5>Técnico en Prevención y Rehabilitación de Personas con Dependencia a Drogas</h5>
               </div>
             </div>
@@ -170,7 +172,7 @@ export default function FormacionTecnica () {
           .intro {
             padding: 50px 0;
 
-            h1 {
+            h3 {
               color: var(--ns-blue);
               font-size: 3.5rem;
               text-align: center;

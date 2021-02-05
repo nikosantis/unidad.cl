@@ -13,7 +13,7 @@ export default function Header () {
         {`
           .header {
             width: 100vw;
-            min-height: 110px;
+            min-height: 106px;
           }
 
           .header-top {

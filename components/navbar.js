@@ -20,7 +20,7 @@ export default function Navbar () {
           <a className='navbar-brand'>
             <div className='logos'>
               <div className='logo-unidad'>
-                <Logo height={70} />
+                <Logo height={60} />
               </div>
             </div>
           </a>
