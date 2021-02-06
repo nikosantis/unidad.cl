@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Link as LinkScroll } from 'react-scroll'
 import Banner from './banner'
+import MobileBanner from './mobile-banner'
 
 export default function Intro () {
   return (
@@ -8,7 +9,8 @@ export default function Intro () {
       <Banner />
       <div className='container'>
         <div className='row'>
-          <div className='col-xl-6 col-lg-12'>
+          <MobileBanner />
+          <div className='col-xl-6 col-lg-12 d-none d-sm-none d-md-none d-lg-block'>
             <div className='logo-unidad'>
               <Image src='/images/fcm-logo.png' alt='Unidad.cl' layout='fill' objectFit='contain' />
             </div>
@@ -34,15 +36,16 @@ export default function Intro () {
         .hero {
           background-color: #fff;
           width: 100vw;
-          min-height: 500px;
           padding: 20px 0;
           position: relative;
           display: flex;
           justify-content: center;
           align-items: center;
-
+          padding: 30px 0;
+          min-height: 500px;
           @media (min-width: 992px) {
             padding: 106px 0;
+            background-color: #ccc;
           }
         }
         .logo-unidad {

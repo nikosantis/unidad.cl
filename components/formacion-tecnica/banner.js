@@ -6,12 +6,12 @@ import BannerText from './banner-text'
 export default function Banner () {
   return (
     <>
-      <div className='bg-orange d-none d-xl-block'>
+      <div className='bg-orange d-none d-sm-none d-md-none d-lg-block'>
         <BgOrange />
       </div>
-      <div className='cien-online d-none d-xl-block'><CienOline /></div>
-      <div className='text d-none d-xl-block'><BannerText /></div>
-      <div className='intro-image d-none d-xl-block'>
+      <div className='cien-online d-none d-sm-none d-md-none d-lg-block'><CienOline /></div>
+      <div className='text d-none d-sm-none d-md-none d-lg-block'><BannerText /></div>
+      <div className='intro-image d-none d-sm-none d-md-none d-lg-block'>
         <Image src='/images/formacion-tecnica.png' alt='Unidad.cl' layout='fill' objectFit='contain' />
       </div>
       <style jsx>
@@ -37,9 +37,9 @@ export default function Banner () {
           .intro-image {
             position: absolute;
             z-index: 3;
-            width: 440px;
-            height: 100%;
+            width: 465px;
             right: 250px;
+            height: 449px;
           }
         `}
       </style>
