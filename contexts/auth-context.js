@@ -16,7 +16,7 @@ const fetcher = async (...args) => {
 }
 
 const AuthProvider = (props) => {
-  const { data, error } = useSWR('api/auth', fetcher, {
+  const { data, error } = useSWR('/api/auth', fetcher, {
     revalidateOnFocus: false,
     shouldRetryOnError: false
   })

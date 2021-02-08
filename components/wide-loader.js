@@ -4,16 +4,22 @@ import Loader from 'components/loader'
 import { useAuth } from 'contexts/auth-context'
 
 export default function WideLoader ({ children }) {
-  const { user, isLoading } = useAuth()
+  const { user, isLoading, isError } = useAuth()
   const router = useRouter()
 
   useEffect(() => {
     if (router.pathname === '/admin') {
-      if (!isLoading && !user) {
+      if (!isLoading && !user && isError) {
         router.push('/admin/login')
       }
     }
-  }, [router, isLoading, user])
+    if (router.pathname === '/admin/login') {
+      console.log(user)
+      if (!isLoading && user) {
+        router.push('/admin')
+      }
+    }
+  }, [router, isLoading, user, isError])
 
   if (isLoading) {
     return (

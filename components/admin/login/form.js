@@ -25,13 +25,19 @@ export default function LoginForm () {
         })
       }
       const res = await fetch('/api/login', config)
+
+      if (!res.ok) {
+        setError('Error al iniciar sesión')
+        setLoading(false)
+      }
+
       const data = await res.json()
       if (data.success) {
-        await router.push('/admin')
+        router.push('/admin')
       }
     } catch (error) {
-      setError(error.message)
       setLoading(false)
+      setError(error.message)
     }
   }, [username, password, router])
 
