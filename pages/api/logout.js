@@ -1,11 +1,11 @@
-import { removeTokenCookie } from '../../lib/auth'
+import { removeTokenCookie } from 'lib/auth-cookies'
 
 export default async (req, res) => {
   const { method } = req
 
   if (method === 'POST') {
     try {
-      await removeTokenCookie(res)
+      removeTokenCookie(res)
 
       res.status(200).json({ success: true, message: 'Sesión terminada' })
     } catch (error) {

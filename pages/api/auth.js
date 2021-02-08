@@ -26,7 +26,6 @@ export default async (req, res) => {
 
       res.status(200).json(filteredUser)
     } catch (error) {
-      console.log(error.message)
       res.status(error.statusCode || 400).json({ error: 'Error al iniciar sesión' })
     }
   }

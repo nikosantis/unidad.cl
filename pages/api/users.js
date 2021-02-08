@@ -1,4 +1,4 @@
-import { hashSync, compareSync } from 'bcrypt'
+import { hashSync } from 'bcrypt'
 import dbConnect from 'utils/dbConnect'
 import User from 'models/user'
 

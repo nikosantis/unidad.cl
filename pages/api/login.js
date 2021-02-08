@@ -1,7 +1,7 @@
 import { compareSync } from 'bcrypt'
 import dbConnect from 'utils/dbConnect'
 import User from 'models/user'
-import { setLoginSession } from '../../lib/auth'
+import { setLoginSession } from 'lib/auth'
 
 export default async (req, res) => {
   const { body, method } = req
@@ -30,7 +30,6 @@ export default async (req, res) => {
 
       res.status(200).json({ success: true, message: 'Inicio de sesión satisfactorio.' })
     } catch (error) {
-      console.log(error.message)
       res.status(error.statusCode || 400).json({ error: 'Error al iniciar sesión' })
     }
   }
