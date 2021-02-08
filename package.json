@@ -8,17 +8,23 @@
     "start": "next start"
   },
   "dependencies": {
+    "@hapi/iron": "^6.0.0",
     "@sendgrid/mail": "^7.4.0",
+    "bcrypt": "^5.0.0",
     "bootstrap": "4.6.0",
     "classnames": "^2.2.6",
+    "cookie": "^0.4.1",
     "luxon": "^1.25.0",
     "mongoose": "^5.11.7",
     "next": "10.0.6",
     "react": "17.0.1",
+    "react-csv": "^2.0.3",
     "react-dom": "17.0.1",
     "react-icons": "^4.1.0",
     "react-scroll": "^1.8.1",
+    "react-table": "^7.6.3",
     "react-transition-group": "^4.4.1",
+    "swr": "^0.4.1",
     "yup": "^0.32.1"
   },
   "devDependencies": {

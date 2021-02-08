@@ -16,7 +16,7 @@ export default function FormacionTecnica () {
       <Spacer height='96' />
       <Intro />
       <main>
-        <section className='intro'>
+        <section className='intro' id='introduccion'>
           <div className='container'>
             <div className='row'>
               <div className='col-12'>
