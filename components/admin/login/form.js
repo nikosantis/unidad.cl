@@ -43,7 +43,7 @@ export default function LoginForm () {
           <input type='text' className='form-control' id='username' value={username} onChange={(e) => setUsername(e.target.value)} />
         </div>
         <div className='form-group col-12'>
-          <label htmlFor='password'>Password</label>
+          <label htmlFor='password'>Contraseña</label>
           <input type='password' className='form-control' id='password' value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
       </div>
