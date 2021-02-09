@@ -7,7 +7,7 @@ export default async (req, res) => {
   if (method === 'GET') {
     try {
       await dbConnect()
-      const forms = await Contact.find({})
+      const forms = await Contact.find({}).sort({ date: 'desc' })
 
       if (!forms) {
         return res.status(400).json({ error: 'Ha ocurrido un error' })

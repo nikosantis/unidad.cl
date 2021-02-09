@@ -4,7 +4,7 @@ import { CSVLink } from 'react-csv'
 import { DateTime } from 'luxon'
 import Table from './table'
 
-const fetcher = (...args) => fetch(...args).then(res => res.json())
+const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 export default function Formularios () {
   const { data } = useSWR('api/formularios', fetcher)
@@ -37,7 +37,10 @@ export default function Formularios () {
           {
             Header: 'Fecha',
             accessor: 'date',
-            Cell: ({ value }) => DateTime.local().toLocaleString(value)
+            Cell: ({ value }) =>
+              DateTime.fromISO(value).toLocaleString(
+                DateTime.DATETIME_SHORT_WITH_SECONDS
+              )
           },
           {
             Header: 'Formulario',
