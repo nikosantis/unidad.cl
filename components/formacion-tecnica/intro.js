@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Link as LinkScroll } from 'react-scroll'
+import { CgCheckO } from 'react-icons/cg'
 import Banner from './banner'
 import MobileBanner from './mobile-banner'
 
@@ -17,6 +18,34 @@ export default function Intro () {
             <h1 className='title'>Formación Técnica Nivel Superior en Rehabilitación de Alcohol y Drogas</h1>
             <hr className='hr' />
             <h2 className='subtitle'><b>Aprende las competencias necesarias</b> <br /> para desarrollar tus capacidades y lograr verdaderos cambios.</h2>
+            <div className='checks'>
+              <div className='check'>
+                <div className='icon'>
+                  <CgCheckO color='var(--ns-orange)' size='25' />
+                </div>
+                <div className='text'>
+                  No se requiere PDT/ PSU
+                </div>
+              </div>
+
+              <div className='check'>
+                <div className='icon'>
+                  <CgCheckO color='var(--ns-orange)' size='25' />
+                </div>
+                <div className='text'>
+                  No necesitas estudios previos
+                </div>
+              </div>
+
+              <div className='check'>
+                <div className='icon'>
+                  <CgCheckO color='var(--ns-orange)' size='25' />
+                </div>
+                <div className='text'>
+                  Debes tener al menos 21 años
+                </div>
+              </div>
+            </div>
             <div className='buttons'>
               <LinkScroll
                 to='contact'
@@ -92,6 +121,21 @@ export default function Intro () {
             opacity: 0.5;
             cursor: not-allowed;
           }
+        }
+        .checks {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 30px;
+        }
+        .check {
+          display: flex;
+        }
+        .icon {
+          margin-right: 10px;
+        }
+        .text {
+          font-size: 1.2rem;
         }
       `}
       </style>
