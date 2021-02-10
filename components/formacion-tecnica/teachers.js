@@ -59,8 +59,6 @@ export default function Teachers () {
                 <div className='sub'>
                   <p><b>Sra. Nury Herdocio Peralta</b></p>
                   <p>Dra. en Ciencias Biológicas de la Universidad de Barcelona, España.</p>
-                  <p><b>Sr. Juan Echegaray Taborga</b></p>
-                  <p>Dr. en Ciencias Biológicas de la Universidad Autónoma de Barcelona, España.</p>
                 </div>
               </div>
             </div>

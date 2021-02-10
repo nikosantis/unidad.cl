@@ -20,8 +20,8 @@ export default function FormacionTecnica () {
           <div className='container'>
             <div className='row'>
               <div className='col-12'>
-                <h3>Formación Técnica</h3>
-                <h5>Técnico en Prevención y Rehabilitación de Personas con Dependencia a Drogas</h5>
+                <h3>Postula al Programa de Formación Técnica en Nivel Superior</h3>
+                <h5>Bienvenidos al programa "Técnico en prevención y rehabilitación de personas con dependencia a drogas"</h5>
               </div>
             </div>
           </div>
