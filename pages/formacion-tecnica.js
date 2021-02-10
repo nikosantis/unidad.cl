@@ -84,7 +84,7 @@ export default function FormacionTecnica () {
 
             h3 {
               color: var(--ns-blue);
-              font-size: 3.5rem;
+              font-size: 2rem;
               text-align: center;
             }
           }
