@@ -3,7 +3,7 @@ import dbConnect from 'utils/dbConnect'
 import User from 'models/user'
 import { setLoginSession } from 'lib/auth'
 
-export default async (req, res) => {
+export default async function handler(req, res) {
   const { body, method } = req
   await dbConnect()
 
@@ -19,7 +19,9 @@ export default async (req, res) => {
       const isPasswordValid = compareSync(body.password, user.password)
 
       if (!isPasswordValid) {
-        return res.status(400).json({ error: 'El usuario no existe o el password es incorrecto' })
+        return res
+          .status(400)
+          .json({ error: 'El usuario no existe o el password es incorrecto' })
       }
       const session = {
         id: user.id,
@@ -28,9 +30,13 @@ export default async (req, res) => {
 
       await setLoginSession(res, session)
 
-      res.status(200).json({ success: true, message: 'Inicio de sesión satisfactorio.' })
+      res
+        .status(200)
+        .json({ success: true, message: 'Inicio de sesión satisfactorio.' })
     } catch (error) {
-      res.status(error.statusCode || 400).json({ error: 'Error al iniciar sesión' })
+      res
+        .status(error.statusCode || 400)
+        .json({ error: 'Error al iniciar sesión' })
     }
   }
 }

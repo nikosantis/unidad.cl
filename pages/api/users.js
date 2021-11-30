@@ -2,11 +2,11 @@ import { hashSync } from 'bcrypt'
 import dbConnect from 'utils/dbConnect'
 import User from 'models/user'
 
-function encryptPassword (password) {
+function encryptPassword(password) {
   return hashSync(password, 10)
 }
 
-export default async (req, res) => {
+export default async function handler(req, res) {
   const { body, method } = req
   await dbConnect()
 
@@ -14,7 +14,9 @@ export default async (req, res) => {
     try {
       const encryptedPassword = encryptPassword(body.password)
       if (!encryptedPassword) {
-        return res.status(400).json({ error: 'Error al crear un nuevo usuario' })
+        return res
+          .status(400)
+          .json({ error: 'Error al crear un nuevo usuario' })
       }
       const newUser = await User.create({
         username: body.username,
@@ -22,11 +24,18 @@ export default async (req, res) => {
       })
 
       if (!newUser) {
-        return res.status(400).json({ error: 'Error al crear un nuevo usuario' })
+        return res
+          .status(400)
+          .json({ error: 'Error al crear un nuevo usuario' })
       }
-      res.status(201).json({ success: true, message: `Se ha creado el usuario ${newUser.username}` })
+      res.status(201).json({
+        success: true,
+        message: `Se ha creado el usuario ${newUser.username}`
+      })
     } catch (error) {
-      res.status(error.statusCode || 400).json({ error: 'Error al crear un nuevo usuario' })
+      res
+        .status(error.statusCode || 400)
+        .json({ error: 'Error al crear un nuevo usuario' })
     }
   }
 }

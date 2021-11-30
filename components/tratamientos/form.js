@@ -7,11 +7,11 @@ import Phone from './form/phone'
 import Comment from './form/comment'
 import Submit from './form/submit'
 
-export default function Form () {
+export default function Form() {
   const state = useFormState()
   const { setValue, reset } = useFormDispatch()
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault()
     setValue('error', '')
     setValue('msg', '')
@@ -74,20 +74,16 @@ export default function Form () {
         </div>
         <Submit />
       </form>
-      {
-        state.msg && (
-          <div className='alert alert-success' role='alert'>
-            {state.msg}
-          </div>
-        )
-      }
-      {
-        state.error && (
-          <div className='alert alert-danger' role='alert'>
-            {state.error}
-          </div>
-        )
-      }
+      {state.msg && (
+        <div className='alert alert-success' role='alert'>
+          {state.msg}
+        </div>
+      )}
+      {state.error && (
+        <div className='alert alert-danger' role='alert'>
+          {state.error}
+        </div>
+      )}
       <style jsx>
         {`
           .contact-wrapper {

@@ -1,13 +1,21 @@
 import Image from 'next/image'
+import logoBlanco from 'public/images/logo-blanco.png'
 
-export default function Footer () {
+export default function Footer() {
   return (
     <footer className='footer'>
       <div className='container'>
         <div className='row justify-content-between align-items-center'>
           <div className='col-lg-3 col-md-3 col-12'>
             <div className='footer-logo'>
-              <Image src='/images/logo-blanco.png' alt='Universidad de Santiago de Chile' width={255} height={131} layout='responsive' />
+              <Image
+                src={logoBlanco}
+                placeholder='blur'
+                alt='Universidad de Santiago de Chile'
+                width={255}
+                height={131}
+                layout='responsive'
+              />
             </div>
           </div>
           <div className='col-lg-7 col-md-7 col-12'>
@@ -25,7 +33,14 @@ export default function Footer () {
                   Tel <a href='tel:+56 2225 4000'>(562) 225 4000</a>
                 </p>
                 <p>
-                  Correo Electrónico: <a href='mailto:melissa.diaz@usach.cl'>melissa.diaz@usach.cl</a> - <a href='mailto:jenniffer.ferrada@usach.cl'>jenniffer.ferrada@usach.cl</a>
+                  Correo Electrónico:{' '}
+                  <a href='mailto:melissa.diaz@usach.cl'>
+                    melissa.diaz@usach.cl
+                  </a>{' '}
+                  -{' '}
+                  <a href='mailto:jenniffer.ferrada@usach.cl'>
+                    jenniffer.ferrada@usach.cl
+                  </a>
                 </p>
               </div>
             </div>
@@ -33,11 +48,11 @@ export default function Footer () {
           <div className='col-lg-2 col-md-2 col-12'>
             <div className='footer-texts'>
               <div className='footer-box'>
+                <p>Desarrollado por:</p>
                 <p>
-                  Desarrollado por:
-                </p>
-                <p>
-                  <a href='https://www.linkedin.com/in/nikosantis/'>Nikolas Santis</a>
+                  <a href='https://www.linkedin.com/in/nikosantis/'>
+                    Nikolas Santis
+                  </a>
                 </p>
               </div>
             </div>

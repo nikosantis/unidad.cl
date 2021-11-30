@@ -1,13 +1,16 @@
 import Link from 'next/link'
 
-export default function FormacionTecnica () {
+export default function FormacionTecnica() {
   return (
     <section className='formacion-tecnica'>
       <div className='container'>
         <div className='row justify-content-center'>
           <div className='col-lg-9 text-center'>
             <h5>Programa de Formación Técnica</h5>
-            <h3>Técnico en Prevención y Rehabilitación de Personas con Dependencia a Drogas</h3>
+            <h3>
+              Técnico en Prevención y Rehabilitación de Personas con Dependencia
+              a Drogas
+            </h3>
             <Link href='/formacion-tecnica'>
               <a className='btn btn-orange'>Más Información</a>
             </Link>

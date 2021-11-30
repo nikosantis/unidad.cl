@@ -10,9 +10,12 @@ import Teachers from 'components/formacion-tecnica/teachers'
 import Price from 'components/formacion-tecnica/price'
 import Contact from 'components/formacion-tecnica/contact'
 
-export default function FormacionTecnica () {
+export default function FormacionTecnica() {
   return (
-    <Page title='Formación Técnica | Unidad de Adicciones' description='Formación Técnica. Unidad de Adicciones de la Universidad de Santiago de Chile. Tratamiento de adicciones, drogas y drogadicción.'>
+    <Page
+      title='Formación Técnica | Unidad de Adicciones'
+      description='Formación Técnica. Unidad de Adicciones de la Universidad de Santiago de Chile. Tratamiento de adicciones, drogas y drogadicción.'
+    >
       <Spacer height='96' />
       <Intro />
       <main>
@@ -20,8 +23,13 @@ export default function FormacionTecnica () {
           <div className='container'>
             <div className='row'>
               <div className='col-12'>
-                <h3>Postula al Programa de Formación Técnica en Nivel Superior</h3>
-                <h5>Bienvenidos al programa "Técnico en prevención y rehabilitación de personas con dependencia a drogas"</h5>
+                <h3>
+                  Postula al Programa de Formación Técnica en Nivel Superior
+                </h3>
+                <h5>
+                  Bienvenidos al programa &quot;Técnico en prevención y
+                  rehabilitación de personas con dependencia a drogas&quot;
+                </h5>
               </div>
             </div>
           </div>
@@ -31,10 +39,14 @@ export default function FormacionTecnica () {
             <div className='row justify-content-center'>
               <div className='col-12 col-lg-8 text-center mb-5'>
                 <p>
-                  El programa tiene como objetivo formar personal especializado, con alto grado de preparación para realizar las actividades propias del Decreto N°04 de 2010 del Ministerio de Salud.
+                  El programa tiene como objetivo formar personal especializado,
+                  con alto grado de preparación para realizar las actividades
+                  propias del Decreto N°04 de 2010 del Ministerio de Salud.
                 </p>
                 <p>
-                  Los técnicos serán capacitados para desempeñarse en instituciones públicas y privadas en actividades de prevención y rehabilitación del consumo de sustancias adictivas.
+                  Los técnicos serán capacitados para desempeñarse en
+                  instituciones públicas y privadas en actividades de prevención
+                  y rehabilitación del consumo de sustancias adictivas.
                 </p>
                 <p>
                   Serán capacitados para trabajar en programas de prevención en:
@@ -42,7 +54,9 @@ export default function FormacionTecnica () {
               </div>
 
               <div className='col-12 col-lg-6 text-center mb-5'>
-                <p><b>Desde esta perspectiva ofrece intervenciones en:</b></p>
+                <p>
+                  <b>Desde esta perspectiva ofrece intervenciones en:</b>
+                </p>
                 <p>Colegios</p>
                 <p>Empresas Privadas</p>
                 <p>Empresas Privadas</p>
@@ -51,17 +65,25 @@ export default function FormacionTecnica () {
               </div>
 
               <div className='col-12 col-lg-6 text-center mb-5'>
-                <p><b>Serán capacitados para incorporarse en la gestión de programas de rehabilitación:</b></p>
-                <p><b>Ambulatorios</b></p>
+                <p>
+                  <b>
+                    Serán capacitados para incorporarse en la gestión de
+                    programas de rehabilitación:
+                  </b>
+                </p>
+                <p>
+                  <b>Ambulatorios</b>
+                </p>
                 <p>Consultorios – COSAM</p>
                 <p>Instituciones privadas</p>
                 <p>Comunidades Terapéuticas</p>
-                <p><b>Internación</b></p>
+                <p>
+                  <b>Internación</b>
+                </p>
                 <p>Servicios de Psiquiatría</p>
                 <p>Comunidades Terapéuticas</p>
                 <p>Clínicas Privadas</p>
               </div>
-
             </div>
           </div>
         </section>

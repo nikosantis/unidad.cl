@@ -1,6 +1,6 @@
 import PlanItem from 'components/formacion-tecnica/plan-item'
 
-export default function Plan () {
+export default function Plan() {
   return (
     <section className='plan'>
       <div className='container'>
@@ -13,9 +13,7 @@ export default function Plan () {
 
         <div className='row'>
           <div className='col-12 col-md-4 col-lg-4'>
-            <PlanItem
-              title='Semestre I'
-            >
+            <PlanItem title='Semestre I'>
               <ul className='plan-list'>
                 <li>Introducción al Sistema Nervioso</li>
                 <li>Salud Pública</li>
@@ -26,9 +24,7 @@ export default function Plan () {
             </PlanItem>
           </div>
           <div className='col-12 col-md-4 col-lg-4'>
-            <PlanItem
-              title='Semestre II'
-            >
+            <PlanItem title='Semestre II'>
               <ul className='plan-list'>
                 <li>Psicología General</li>
                 <li>Psicofarmacología</li>
@@ -39,9 +35,7 @@ export default function Plan () {
             </PlanItem>
           </div>
           <div className='col-12 col-md-4 col-lg-4'>
-            <PlanItem
-              title='Semestre III y IV'
-            >
+            <PlanItem title='Semestre III y IV'>
               <ul className='plan-list'>
                 <li>Técnicas Integrativas de Rehabilitación</li>
                 <li>Psicopatología y Técnicas de Terapia en Adicciones</li>
@@ -99,7 +93,7 @@ export default function Plan () {
 
             &:disabled {
               color: #fff;
-              opacity: .5;
+              opacity: 0.5;
               cursor: not-allowed;
             }
           }

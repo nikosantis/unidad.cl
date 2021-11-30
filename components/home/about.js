@@ -1,6 +1,6 @@
 import Professionals from 'components/professionals'
 
-export default function About () {
+export default function About() {
   return (
     <section className='about'>
       <div className='container'>
@@ -9,8 +9,8 @@ export default function About () {
             <h2>Quienes somos</h2>
             <p>
               Grupo de profesionales de la Facultad de Ciencias Médicas de la
-              Universidad de Santiago dedicados a la Investigación y Docencia en Abuso
-              de Alcohol y Drogas
+              Universidad de Santiago dedicados a la Investigación y Docencia en
+              Abuso de Alcohol y Drogas
             </p>
           </div>
         </div>

@@ -1,13 +1,23 @@
 import Image from 'next/image'
+import bannerImg from 'public/images/banner-unidad.png'
 
-export default function Banner () {
+export default function Banner() {
   return (
     <>
       <div className='intro-float d-none d-xl-block'>
         <div className='intro-blue' />
       </div>
       <div className='intro-image d-none d-xl-block'>
-        <Image src='/images/banner-unidad.png' alt='Unidad.cl' layout='fill' objectFit='contain' />
+        <div className='relative'>
+          <Image
+            src={bannerImg}
+            priority
+            placeholder='blur'
+            alt='Unidad.cl'
+            layout='fill'
+            objectFit='contain'
+          />
+        </div>
       </div>
       <div className='intro-block d-none d-xl-flex'>
         <div className='number'>
@@ -32,6 +42,11 @@ export default function Banner () {
             display: flex;
             z-index: 2;
             width: 430px;
+            height: 100%;
+          }
+          .relative {
+            position: relative;
+            width: 600px;
             height: 100%;
           }
           .intro-blue {

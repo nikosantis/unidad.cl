@@ -3,9 +3,12 @@ import Footer from 'components/footer'
 import Spacer from 'components/spacer'
 import Professionals from 'components/professionals'
 
-export default function QuienesSomos () {
+export default function QuienesSomos() {
   return (
-    <Page title='Quienes Somos | Unidad de Adicciones' description='Quienes Somos. Unidad de Adicciones de la Universidad de Santiago de Chile. Tratamiento de adicciones, drogas y drogadicción.'>
+    <Page
+      title='Quienes Somos | Unidad de Adicciones'
+      description='Quienes Somos. Unidad de Adicciones de la Universidad de Santiago de Chile. Tratamiento de adicciones, drogas y drogadicción.'
+    >
       <Spacer height='110' />
       <main>
         <section className='intro'>
@@ -13,7 +16,10 @@ export default function QuienesSomos () {
             <div className='row'>
               <div className='col-lg-12'>
                 <h1>Bienvenidos a Unidad de Adicciones</h1>
-                <h3>“Conocimiento e investigación al servicio del tratamiento en Adicciones”</h3>
+                <h3>
+                  “Conocimiento e investigación al servicio del tratamiento en
+                  Adicciones”
+                </h3>
               </div>
             </div>
           </div>
@@ -23,19 +29,24 @@ export default function QuienesSomos () {
           <div className='container'>
             <div className='row'>
               <div className='col-lg-12'>
-                <h2>
-                  Quienes Somos
-                </h2>
+                <h2>Quienes Somos</h2>
                 <p>
-                  Grupo de profesionales de la Facultad de Ciencias Médicas  de la Universidad de Santiago dedicados a la Investigación y Docencia en Abuso de Alcohol y Drogas.
+                  Grupo de profesionales de la Facultad de Ciencias Médicas de
+                  la Universidad de Santiago dedicados a la Investigación y
+                  Docencia en Abuso de Alcohol y Drogas.
                 </p>
                 <h2>Nuestra Misión</h2>
                 <p>
-                  Generar conocimientos y desarrollar un Modelo de Psicoterapia que permita abordar el trabajo con pacientes que presentan Trastorno por abuso de Alcohol y Drogas.
+                  Generar conocimientos y desarrollar un Modelo de Psicoterapia
+                  que permita abordar el trabajo con pacientes que presentan
+                  Trastorno por abuso de Alcohol y Drogas.
                 </p>
                 <h2>Nuestros Valores</h2>
                 <p>
-                  Somos académicos de trayectoria, con amplia experiencia en investigación, publicaciones de libros y trabajos científicos con más de 25 años de dedicación a la docencia investigación y tratamiento.
+                  Somos académicos de trayectoria, con amplia experiencia en
+                  investigación, publicaciones de libros y trabajos científicos
+                  con más de 25 años de dedicación a la docencia investigación y
+                  tratamiento.
                 </p>
               </div>
             </div>

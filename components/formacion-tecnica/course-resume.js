@@ -1,7 +1,7 @@
 import { FiEdit, FiClock, FiCalendar } from 'react-icons/fi'
 import { MdLaptopMac } from 'react-icons/md'
 
-export default function CourseResume () {
+export default function CourseResume() {
   return (
     <section className='course-resume'>
       <div className='container'>
@@ -17,9 +17,7 @@ export default function CourseResume () {
                 <h3>Duración</h3>
               </div>
 
-              <div className='box-text'>
-                2 años / 4 Semestres
-              </div>
+              <div className='box-text'>2 años / 4 Semestres</div>
             </div>
           </div>
 
@@ -53,9 +51,7 @@ export default function CourseResume () {
                 <h3>Modalidad</h3>
               </div>
 
-              <div className='box-text'>
-                100% Online
-              </div>
+              <div className='box-text'>100% Online</div>
             </div>
           </div>
 
@@ -70,9 +66,7 @@ export default function CourseResume () {
                 <h3>Inicio de Clases</h3>
               </div>
 
-              <div className='box-text'>
-                Marzo 2021
-              </div>
+              <div className='box-text'>Marzo 2021</div>
             </div>
           </div>
         </div>

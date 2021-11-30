@@ -6,11 +6,11 @@ import Phone from './form/phone'
 import Comment from './form/comment'
 import Submit from './form/submit'
 
-export default function Form () {
+export default function Form() {
   const state = useFormState()
   const { setValue, reset } = useFormDispatch()
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault()
     setValue('error', '')
     setValue('msg', '')

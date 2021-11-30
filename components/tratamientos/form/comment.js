@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { useFormState, useFormDispatch } from 'contexts/form-context'
 
-function Comment () {
+function Comment() {
   const { comment } = useFormState()
   const { setValue } = useFormDispatch()
 
@@ -15,7 +15,7 @@ function Comment () {
         placeholder='Comentario'
         name='comment'
         value={comment}
-        onChange={(evt) => setValue('comment', evt.target.value)}
+        onChange={evt => setValue('comment', evt.target.value)}
       />
     </>
   )

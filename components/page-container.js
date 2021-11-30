@@ -1,21 +1,31 @@
 import Head from 'next/head'
 
-export default function PageContainer ({ title, description, url, children }) {
+export default function PageContainer({ title, description, url, children }) {
   return (
     <div className='wrapper'>
       <Head>
-        <title>{title || 'Unidad de Adicciones | Universidad de Santiago de Chile'}</title>
+        <title>
+          {title || 'Unidad de Adicciones | Universidad de Santiago de Chile'}
+        </title>
         <meta
           property='og:title'
-          content={title || 'Unidad de Adicciones | Universidad de Santiago de Chile'}
+          content={
+            title || 'Unidad de Adicciones | Universidad de Santiago de Chile'
+          }
         />
         <meta
           name='description'
-          content={description || 'Unidad de Adicciones de la Universidad de Santiago de Chile. Tratamiento de adicciones, drogas y drogadicción.'}
+          content={
+            description ||
+            'Unidad de Adicciones de la Universidad de Santiago de Chile. Tratamiento de adicciones, drogas y drogadicción.'
+          }
         />
         <meta
           property='og:description'
-          content={description || 'Unidad de Adicciones de la Universidad de Santiago de Chile. Tratamiento de adicciones, drogas y drogadicción.'}
+          content={
+            description ||
+            'Unidad de Adicciones de la Universidad de Santiago de Chile. Tratamiento de adicciones, drogas y drogadicción.'
+          }
         />
         {/* <meta
           property='og:image'
@@ -26,10 +36,7 @@ export default function PageContainer ({ title, description, url, children }) {
           content={`https://unidad.cl/${url}` || 'https://unidad.cl/'}
         />
         <meta property='og:type' content='website' />
-        <meta
-          property='og:locale'
-          content='es_ES'
-        />
+        <meta property='og:locale' content='es_ES' />
         <meta httpEquiv='Content-Language' content='es' />
         <meta name='author' content='Nikolas Santis' />
       </Head>

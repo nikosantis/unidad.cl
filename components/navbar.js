@@ -5,12 +5,12 @@ import cx from 'classnames'
 import Logo from 'components/logo'
 import Collapse from 'components/collapse'
 
-export default function Navbar () {
+export default function Navbar() {
   const router = useRouter()
   const [collapsed, setCollapsed] = useState(false)
 
   const handleClick = useCallback(() => {
-    setCollapsed((collapsed) => !collapsed)
+    setCollapsed(collapsed => !collapsed)
   }, [])
 
   return (
@@ -39,38 +39,47 @@ export default function Navbar () {
 
         <Collapse isOpen={collapsed} navbar>
           <ul className='navbar-nav ml-auto'>
-            <li className={cx('nav-item', {
-              active: router.pathname === '/'
-            })}
+            <li
+              className={cx('nav-item', {
+                active: router.pathname === '/'
+              })}
             >
               <Link href='/'>
                 <a className='nav-link'>Inicio</a>
               </Link>
             </li>
-            <li className={cx('nav-item', {
-              active: router.pathname === '/quienes-somos'
-            })}
+            <li
+              className={cx('nav-item', {
+                active: router.pathname === '/quienes-somos'
+              })}
             >
               <Link href='/quienes-somos'>
                 <a className='nav-link'>Quiénes Somos</a>
               </Link>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='https://diplomadopsicoterapia.cl/' target='_blank' rel='noreferrer'>
+              <a
+                className='nav-link'
+                href='https://diplomadopsicoterapia.cl/'
+                target='_blank'
+                rel='noreferrer'
+              >
                 Diplomado
               </a>
             </li>
-            <li className={cx('nav-item', {
-              active: router.pathname === '/tratamientos'
-            })}
+            <li
+              className={cx('nav-item', {
+                active: router.pathname === '/tratamientos'
+              })}
             >
               <Link href='/tratamientos'>
                 <a className='nav-link'>Tratamientos</a>
               </Link>
             </li>
-            <li className={cx('nav-item', {
-              active: router.pathname === '/formacion-tecnica'
-            })}
+            <li
+              className={cx('nav-item', {
+                active: router.pathname === '/formacion-tecnica'
+              })}
             >
               <Link href='/formacion-tecnica'>
                 <a className='nav-link'>Formación Técnica</a>

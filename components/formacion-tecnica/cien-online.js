@@ -1,4 +1,4 @@
-export default function CienOline () {
+export default function CienOline() {
   return (
     <svg
       width={165}

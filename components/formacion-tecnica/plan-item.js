@@ -1,12 +1,8 @@
-export default function PlanItem ({ title, children }) {
+export default function PlanItem({ title, children }) {
   return (
     <div className='plan-item'>
-      <h4>
-        {title}
-      </h4>
-      <div>
-        {children}
-      </div>
+      <h4>{title}</h4>
+      <div>{children}</div>
       <style jsx>
         {`
           .plan-item {

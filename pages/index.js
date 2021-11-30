@@ -7,7 +7,7 @@ import Diplomado from 'components/home/diplomado'
 import FormacionTecnica from 'components/home/formacion-tecnica'
 import Contact from 'components/home/contact'
 
-export default function Home () {
+export default function Home() {
   return (
     <Page>
       <Spacer height='110' background='var(--ns-bg-secondary)' />

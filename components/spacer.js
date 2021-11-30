@@ -1,4 +1,4 @@
-export default function Spacer ({ height, background }) {
+export default function Spacer({ height, background }) {
   return (
     <div>
       <style jsx>

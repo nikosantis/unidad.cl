@@ -2,12 +2,9 @@ import LoginPage from 'components/layout/login-page'
 import WideLoader from 'components/wide-loader'
 import Formularios from 'components/admin/formularios'
 
-export default function Admin () {
+export default function Admin() {
   return (
-    <LoginPage
-      title='Formularios'
-      url='/admin'
-    >
+    <LoginPage title='Formularios' url='/admin'>
       <WideLoader>
         <main>
           <div className='container'>
@@ -23,7 +20,12 @@ export default function Admin () {
           <div className='container'>
             <div className='row justify-content-center'>
               <div className='col-12 text-center'>
-                <small>Desarrollado por: <a href='https://www.linkedin.com/in/nikosantis/'>Nikolas Santis</a></small>
+                <small>
+                  Desarrollado por:{' '}
+                  <a href='https://www.linkedin.com/in/nikosantis/'>
+                    Nikolas Santis
+                  </a>
+                </small>
               </div>
             </div>
           </div>

@@ -1,25 +1,45 @@
 import Image from 'next/image'
 import { CgCheckO } from 'react-icons/cg'
 import { Link as LinkScroll } from 'react-scroll'
+import logoFcm from 'public/images/fcm-logo.png'
+import formacionImg from 'public/images/formacion-tecnica.png'
 
-export default function MobileBanner () {
+export default function MobileBanner() {
   return (
     <div className='col-12 d-block d-lg-none px-0'>
       <div className='logo-unidad'>
-        <Image src='/images/fcm-logo.png' alt='Unidad.cl' layout='fill' objectFit='contain' />
+        <Image
+          src={logoFcm}
+          priority
+          placeholder='blur'
+          alt='Unidad.cl'
+          layout='fill'
+          objectFit='contain'
+        />
       </div>
       <div className='intro-image'>
-        <Image src='/images/formacion-tecnica.png' alt='Unidad.cl' layout='fill' objectFit='contain' />
+        <Image
+          src={formacionImg}
+          placeholder='blur'
+          alt='Unidad.cl'
+          layout='fill'
+          objectFit='contain'
+        />
       </div>
       <div className='bg-orange' />
       <div className='intro-blue'>
-        <p>Formación Técnica Nivel Superior en Rehabilitación de Alcohol y Drogas</p>
+        <p>
+          Formación Técnica Nivel Superior en Rehabilitación de Alcohol y Drogas
+        </p>
       </div>
       <div className='intro-orange'>
         <p>100% ONLINE</p>
       </div>
       <div className='text-box'>
-        <h2 className='subtitle'><b>Aprende las competencias necesarias</b> <br /> para desarrollar tus capacidades y lograr verdaderos cambios.</h2>
+        <h2 className='subtitle'>
+          <b>Aprende las competencias necesarias</b> <br /> para desarrollar tus
+          capacidades y lograr verdaderos cambios.
+        </h2>
       </div>
 
       <div className='checks'>
@@ -27,27 +47,21 @@ export default function MobileBanner () {
           <div className='icon'>
             <CgCheckO color='var(--ns-orange)' size='25' />
           </div>
-          <div className='text'>
-            No se requiere PDT/ PSU
-          </div>
+          <div className='text'>No se requiere PDT/ PSU</div>
         </div>
 
         <div className='check'>
           <div className='icon'>
             <CgCheckO color='var(--ns-orange)' size='25' />
           </div>
-          <div className='text'>
-            No necesitas estudios previos
-          </div>
+          <div className='text'>No necesitas estudios previos</div>
         </div>
 
         <div className='check'>
           <div className='icon'>
             <CgCheckO color='var(--ns-orange)' size='25' />
           </div>
-          <div className='text'>
-            Debes tener al menos 21 años
-          </div>
+          <div className='text'>Debes tener al menos 21 años</div>
         </div>
       </div>
 

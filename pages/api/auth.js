@@ -2,7 +2,7 @@ import dbConnect from 'utils/dbConnect'
 import { getLoginSession } from '../../lib/auth'
 import User from 'models/user'
 
-export default async (req, res) => {
+export default async function handler(req, res) {
   const { method } = req
 
   if (method === 'GET') {
@@ -26,7 +26,9 @@ export default async (req, res) => {
 
       res.status(200).json(filteredUser)
     } catch (error) {
-      res.status(error.statusCode || 400).json({ error: 'Error al iniciar sesión' })
+      res
+        .status(error.statusCode || 400)
+        .json({ error: 'Error al iniciar sesión' })
     }
   }
 }

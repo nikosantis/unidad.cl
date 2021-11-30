@@ -1,7 +1,7 @@
 import { useTable, usePagination, useSortBy } from 'react-table'
 import cs from 'classnames'
 
-export default function Table ({ data, columns }) {
+export default function Table({ data, columns }) {
   const {
     getTableProps,
     getTableBodyProps,
@@ -31,16 +31,24 @@ export default function Table ({ data, columns }) {
         <thead>
           {headerGroups.map(headerGroup => {
             return (
-              <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.getHeaderGroupProps().key}>
+              <tr
+                {...headerGroup.getHeaderGroupProps()}
+                key={headerGroup.getHeaderGroupProps().key}
+              >
                 {headerGroup.headers.map(column => {
                   return (
-                    <th {...column.getHeaderProps(column.getSortByToggleProps())} scope='col' key={column.id}>
+                    <th
+                      {...column.getHeaderProps(column.getSortByToggleProps())}
+                      scope='col'
+                      key={column.id}
+                    >
                       {column.render('Header')}
-                      <span>{column.isSorted
-                        ? column.isSortedDesc
+                      <span>
+                        {column.isSorted
+                          ? column.isSortedDesc
                             ? ' 🔽'
                             : ' 🔼'
-                        : ''}
+                          : ''}
                       </span>
                     </th>
                   )
@@ -50,12 +58,16 @@ export default function Table ({ data, columns }) {
           })}
         </thead>
         <tbody {...getTableBodyProps()}>
-          {page.map((row) => {
+          {page.map(row => {
             prepareRow(row)
             return (
               <tr {...row.getRowProps()} key={row.id}>
                 {row.cells.map(cell => {
-                  return <td {...cell.getCellProps()} key={cell.getCellProps().key}>{cell.render('Cell')}</td>
+                  return (
+                    <td {...cell.getCellProps()} key={cell.getCellProps().key}>
+                      {cell.render('Cell')}
+                    </td>
+                  )
                 })}
               </tr>
             )
@@ -74,28 +86,30 @@ export default function Table ({ data, columns }) {
               {'<<'}
             </button>
           </li>
-          {
-            pageOptions.map(pg => {
-              return (
-                <li
-                  className={cs('page-item', {
-                    disabled: pageIndex === pg
-                  })}
-                  key={pg}
-                >
-                  <button onClick={() => gotoPage(pg)} className='page-link'>
-                    {pg}
-                  </button>
-                </li>
-              )
-            })
-          }
+          {pageOptions.map(pg => {
+            return (
+              <li
+                className={cs('page-item', {
+                  disabled: pageIndex === pg
+                })}
+                key={pg}
+              >
+                <button onClick={() => gotoPage(pg)} className='page-link'>
+                  {pg}
+                </button>
+              </li>
+            )
+          })}
           <li
             className={cs('page-item', {
               disabled: !canNextPage
             })}
           >
-            <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage} className='page-link'>
+            <button
+              onClick={() => gotoPage(pageCount - 1)}
+              disabled={!canNextPage}
+              className='page-link'
+            >
               {'>>'}
             </button>
           </li>

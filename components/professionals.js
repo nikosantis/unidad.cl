@@ -1,32 +1,64 @@
 import Image from 'next/image'
 
-export default function Professionals () {
+import avatar1 from 'public/images/humberto-guajardo.png'
+import avatar2 from 'public/images/diana-kushner.png'
+import avatar3 from 'public/images/felipe-lecannelier.png'
+import avatar4 from 'public/images/javier-guajardo.png'
+
+export default function Professionals() {
   return (
     <section className='professionals'>
       <div className='container'>
         <div className='row justify-content-center'>
           <div className='col-lg-3 col-12 professional'>
             <div className='avatar'>
-              <Image src='/images/humberto-guajardo.png' alt='Humberto Guajardo' layout='fill' objectFit='contain' />
+              <Image
+                src={avatar1}
+                placeholder='blur'
+                alt='Humberto Guajardo'
+                layout='fill'
+                objectFit='contain'
+              />
             </div>
             <div className='info'>
               <h4>Prof. Dr. Humberto Guajardo Sáinz</h4>
               <h5>Director</h5>
-              <p>Médico Psiquiatra. Director de Postgrado de la Facultad de Ciencias Médicas de la Universidad de Santiago. Prof. Titular de Psiquiatría Facultad de Ciencias Médicas USACH</p>
+              <p>
+                Médico Psiquiatra. Director de Postgrado de la Facultad de
+                Ciencias Médicas de la Universidad de Santiago. Prof. Titular de
+                Psiquiatría Facultad de Ciencias Médicas USACH
+              </p>
             </div>
           </div>
           <div className='col-lg-3 col-12 professional'>
             <div className='avatar'>
-              <Image src='/images/diana-kushner.png' alt='Humberto Guajardo' layout='fill' objectFit='contain' />
+              <Image
+                src={avatar2}
+                placeholder='blur'
+                alt='Humberto Guajardo'
+                layout='fill'
+                objectFit='contain'
+              />
             </div>
             <div className='info'>
               <h4>Sra. Diana Kushner Lanis</h4>
-              <p>Psicóloga Magister en Psicoterapia Cognitiva Postracionalista, USACH., Antropóloga social. Profesora en Prevención y Rehabilitación de Drogas de la Facultad de Ciencias Médicas de la Universidad de Santiago</p>
+              <p>
+                Psicóloga Magister en Psicoterapia Cognitiva Postracionalista,
+                USACH., Antropóloga social. Profesora en Prevención y
+                Rehabilitación de Drogas de la Facultad de Ciencias Médicas de
+                la Universidad de Santiago
+              </p>
             </div>
           </div>
           <div className='col-lg-3 col-12 professional'>
             <div className='avatar'>
-              <Image src='/images/felipe-lecannelier.png' alt='Humberto Guajardo' layout='fill' objectFit='contain' />
+              <Image
+                src={avatar3}
+                placeholder='blur'
+                alt='Humberto Guajardo'
+                layout='fill'
+                objectFit='contain'
+              />
             </div>
             <div className='info'>
               <h4>Sr. Felipe Lecannelier Acevedo</h4>
@@ -35,11 +67,21 @@ export default function Professionals () {
           </div>
           <div className='col-lg-3 col-12 professional'>
             <div className='avatar'>
-              <Image src='/images/javier-guajardo.png' alt='Humberto Guajardo' layout='fill' objectFit='contain' />
+              <Image
+                src={avatar4}
+                placeholder='blur'
+                alt='Humberto Guajardo'
+                layout='fill'
+                objectFit='contain'
+              />
             </div>
             <div className='info'>
               <h4>Sr. Javier Guajardo</h4>
-              <p>Psicólogo, Magister en Psicología Clínica, mención psicoterapia integrativa, Universidad Adolfo Ibáñez. Director Centro de Adolescentes CIAD</p>
+              <p>
+                Psicólogo, Magister en Psicología Clínica, mención psicoterapia
+                integrativa, Universidad Adolfo Ibáñez. Director Centro de
+                Adolescentes CIAD
+              </p>
             </div>
           </div>
         </div>

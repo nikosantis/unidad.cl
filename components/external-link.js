@@ -1,6 +1,6 @@
 import cx from 'classnames'
 
-export default function ExternalLink ({ href, text, className }) {
+export default function ExternalLink({ href, text, className }) {
   return (
     <a
       href={href}
@@ -24,7 +24,7 @@ export default function ExternalLink ({ href, text, className }) {
 
             &:disabled {
               color: #fff;
-              opacity: .5;
+              opacity: 0.5;
               cursor: not-allowed;
             }
           }
@@ -41,7 +41,7 @@ export default function ExternalLink ({ href, text, className }) {
 
             &:disabled {
               color: #fff;
-              opacity: .5;
+              opacity: 0.5;
               cursor: not-allowed;
             }
           }

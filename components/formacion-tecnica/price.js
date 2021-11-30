@@ -1,4 +1,4 @@
-export default function Price () {
+export default function Price() {
   return (
     <section className='price'>
       <div className='container'>
@@ -91,7 +91,7 @@ export default function Price () {
 
             &:disabled {
               color: #fff;
-              opacity: .5;
+              opacity: 0.5;
               cursor: not-allowed;
             }
           }

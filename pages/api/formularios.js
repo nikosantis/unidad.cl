@@ -1,7 +1,7 @@
 import dbConnect from 'utils/dbConnect'
 import Contact from 'models/contact'
 
-export default async (req, res) => {
+export default async function handler(req, res) {
   const { method } = req
 
   if (method === 'GET') {
@@ -14,7 +14,9 @@ export default async (req, res) => {
       }
       res.status(200).json(forms)
     } catch (error) {
-      res.status(error.statusCode || 400).json({ error: 'Ha ocurrido un error' })
+      res
+        .status(error.statusCode || 400)
+        .json({ error: 'Ha ocurrido un error' })
     }
   }
 }

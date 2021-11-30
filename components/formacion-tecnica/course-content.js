@@ -1,4 +1,4 @@
-export default function CourseContent () {
+export default function CourseContent() {
   return (
     <section className='plan'>
       <div className='container'>
@@ -12,7 +12,9 @@ export default function CourseContent () {
           <div className='col-12 col-lg-4'>
             <ul className='plan-list'>
               <li>Desarrollo psicológico normal</li>
-              <li>Drogas: características, manifestaciones sociales y ambientales</li>
+              <li>
+                Drogas: características, manifestaciones sociales y ambientales
+              </li>
               <li>Manifestaciones clínicas en personas dependientes</li>
               <li>Enfermedades físicas y mentales asociadas</li>
             </ul>
@@ -28,7 +30,10 @@ export default function CourseContent () {
             <ul className='plan-list'>
               <li>Proceso de rehabilitación</li>
               <li>Autocuidado de la salud</li>
-              <li>Manejo de técnicas de rehabilitación individual, grupal y familiar</li>
+              <li>
+                Manejo de técnicas de rehabilitación individual, grupal y
+                familiar
+              </li>
             </ul>
           </div>
         </div>
@@ -73,7 +78,7 @@ export default function CourseContent () {
 
             &:disabled {
               color: #fff;
-              opacity: .5;
+              opacity: 0.5;
               cursor: not-allowed;
             }
           }

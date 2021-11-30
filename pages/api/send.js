@@ -4,7 +4,7 @@ import Contact from 'models/contact'
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
 
-export default async (req, res) => {
+export default async function handler(req, res) {
   const { body, method } = req
   await dbConnect()
 
@@ -37,9 +37,12 @@ export default async (req, res) => {
           </div>
         `
       })
-      res.status(200).json({ message: 'Mensaje enviado. Pronto nos contactaremos con usted.' })
+      res.status(200).json({
+        message: 'Mensaje enviado. Pronto nos contactaremos con usted.'
+      })
     } catch (error) {
-      res.status(error.statusCode || 500)
+      res
+        .status(error.statusCode || 500)
         .json({ error: 'Error al enviar el mensaje' })
     }
   }

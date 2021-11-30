@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Loader from 'components/loader'
 import { useAuth } from 'contexts/auth-context'
 
-export default function WideLoader ({ children }) {
+export default function WideLoader({ children }) {
   const { user, isLoading, isError } = useAuth()
   const router = useRouter()
 
@@ -24,16 +24,18 @@ export default function WideLoader ({ children }) {
   if (isLoading) {
     return (
       <div className='loader'>
-        <div><Loader /></div>
+        <div>
+          <Loader />
+        </div>
         <style jsx>
           {`
-          .loader {
-            min-height: calc(100vh - (110px - 211px));
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-        `}
+            .loader {
+              min-height: calc(100vh - (110px - 211px));
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          `}
         </style>
       </div>
     )

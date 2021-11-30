@@ -11,30 +11,30 @@ const collapseStyles = {
   exited: 'collapse'
 }
 
-function getTransitionClass (status) {
+function getTransitionClass(status) {
   return collapseStyles[status] || 'collapse'
 }
 
-export default function Collapse ({ isOpen, navbar, children }) {
+export default function Collapse({ isOpen, navbar, children }) {
   const [height, setHeight] = useState(null)
 
-  function onEntering (node) {
+  function onEntering(node) {
     setHeight(node.scrollHeight)
   }
 
-  function onEntered (node) {
+  function onEntered(node) {
     setHeight(node.scrollHeight)
   }
 
-  function onExit (node) {
+  function onExit(node) {
     setHeight(node.scrollHeight)
   }
 
-  function onExiting () {
+  function onExiting() {
     setHeight(0)
   }
 
-  function onExited () {
+  function onExited() {
     setHeight(null)
   }
 
@@ -52,10 +52,7 @@ export default function Collapse ({ isOpen, navbar, children }) {
         const collapseClass = getTransitionClass(status)
         const classes = cx(collapseClass, navbar && 'navbar-collapse')
         return (
-          <div
-            style={{ height }}
-            className={classes}
-          >
+          <div style={{ height }} className={classes}>
             {children}
           </div>
         )

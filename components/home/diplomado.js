@@ -1,20 +1,35 @@
 import Image from 'next/image'
 import ExternalLink from 'components/external-link'
+import diplomadoImg from 'public/images/diplomado.png'
 
-export default function Diplomado () {
+export default function Diplomado() {
   return (
     <section className='diplomado'>
       <div className='float'>
-        <Image src='/images/diplomado.png' alt='Diplomado Clínico Internacional' layout='fill' objectFit='contain' />
+        <div className='relative'>
+          <Image
+            src={diplomadoImg}
+            placeholder='blur'
+            alt='Diplomado Clínico Internacional'
+            layout='fill'
+            objectFit='contain'
+          />
+        </div>
       </div>
       <div className='container'>
         <div className='row'>
           <div className='col-lg-7'>
             <h5>Diplomado Clínico Internacional</h5>
-            <h3>Psicoterapia para el Tratamiento de abuso de alcohol y drogas</h3>
+            <h3>
+              Psicoterapia para el Tratamiento de abuso de alcohol y drogas
+            </h3>
             <h4>Aproximación Neuroafectiva Constructivista</h4>
             <div className='link'>
-              <ExternalLink href='https://diplomadopsicoterapia.cl/' text='Más Información' className='btn-usach' />
+              <ExternalLink
+                href='https://diplomadopsicoterapia.cl/'
+                text='Más Información'
+                className='btn-usach'
+              />
             </div>
           </div>
         </div>
@@ -38,6 +53,15 @@ export default function Diplomado () {
             bottom: 0;
             z-index: 1;
             right: 5%;
+            width: 350px;
+            height: 423px;
+            @media (min-width: 768px) {
+              width: 300px;
+              height: 373px;
+            }
+          }
+          .relative {
+            position: relative;
             width: 350px;
             height: 423px;
             @media (min-width: 768px) {

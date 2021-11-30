@@ -1,6 +1,10 @@
-export default function Loader () {
+export default function Loader() {
   return (
-    <div className='lds-ring'><div /><div /><div /><div />
+    <div className='lds-ring'>
+      <div />
+      <div />
+      <div />
+      <div />
       <style jsx>
         {`
           .lds-ring {

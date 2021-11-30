@@ -2,12 +2,9 @@ import LoginPage from 'components/layout/login-page'
 import WideLoader from 'components/wide-loader'
 import LoginForm from 'components/admin/login/form'
 
-export default function Login () {
+export default function Login() {
   return (
-    <LoginPage
-      title='Iniciar Sesión'
-      url='/admin/login'
-    >
+    <LoginPage title='Iniciar Sesión' url='/admin/login'>
       <WideLoader>
         <main>
           <div className='container'>

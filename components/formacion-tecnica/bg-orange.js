@@ -1,4 +1,4 @@
-export default function BgOrange () {
+export default function BgOrange() {
   return (
     <svg
       width={585}

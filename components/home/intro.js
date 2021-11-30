@@ -1,7 +1,7 @@
 import Banner from 'components/home/banner'
 import Link from 'next/link'
 
-export default function Intro () {
+export default function Intro() {
   return (
     <section className='intro'>
       <div className='container'>
