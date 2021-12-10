@@ -17,13 +17,15 @@ export default function Banner() {
         <BannerText />
       </div>
       <div className='intro-image d-none d-sm-none d-md-none d-lg-block'>
-        <Image
-          src={formacionImg}
-          placeholder='blur'
-          alt='Unidad.cl'
-          layout='fill'
-          objectFit='contain'
-        />
+        <div className='intro-image-box'>
+          <Image
+            src={formacionImg}
+            placeholder='blur'
+            alt='Unidad.cl'
+            layout='fill'
+            objectFit='contain'
+          />
+        </div>
       </div>
       <style jsx>
         {`
@@ -48,8 +50,13 @@ export default function Banner() {
           .intro-image {
             position: absolute;
             z-index: 3;
-            width: 465px;
             right: 250px;
+            width: 465px;
+            height: 449px;
+          }
+          .intro-image-box {
+            position: relative;
+            width: 465px;
             height: 449px;
           }
         `}
