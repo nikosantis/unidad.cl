@@ -16,31 +16,35 @@ export default function Form() {
     setValue('msg', '')
     setValue('loading', true)
 
-    const res = await fetch('/api/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        firstName: state.firstName,
-        lastName: state.lastName,
-        phone: state.phone,
-        email: state.email,
-        comment: state.comment,
-        form: 'Formulario Contacto Formación Técnica',
-        mailTo: 'claudia.miranda.z@usach.cl',
-        mailCc: 'tamara.silva@usach.cl'
+    try {
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName: state.firstName,
+          lastName: state.lastName,
+          phone: state.phone,
+          email: state.email,
+          comment: state.comment,
+          form: 'Formulario Contacto Formación Técnica',
+          mailTo: 'claudia.miranda.z@usach.cl',
+          mailCc: 'tamara.silva@usach.cl'
+        })
       })
-    })
-    const text = await res.json()
-
-    if (res.status === 200) {
+      const text = await res.json()
+      if (res.status === 200) {
+        setValue('loading', false)
+        reset()
+        setValue('msg', text.message)
+      } else {
+        setValue('loading', false)
+        setValue('error', text.error)
+      }
+    } catch (err) {
+      setValue('error', err.message)
       setValue('loading', false)
-      reset()
-      setValue('msg', text.message)
-    } else {
-      setValue('loading', false)
-      setValue('error', text.error)
     }
   }
   return (

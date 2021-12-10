@@ -41,6 +41,7 @@ export default async function handler(req, res) {
         message: 'Mensaje enviado. Pronto nos contactaremos con usted.'
       })
     } catch (error) {
+      console.log(error)
       res
         .status(error.statusCode || 500)
         .json({ error: 'Error al enviar el mensaje' })
