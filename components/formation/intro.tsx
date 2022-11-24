@@ -1,3 +1,4 @@
+import { useScroll } from 'lib/contexts/scroll'
 import { CgCheckO } from 'react-icons/cg'
 
 import Banner from './banner'
@@ -5,6 +6,15 @@ import BannerMobile from './banner-mobile'
 import LogoFCM from './logo-fcm'
 
 export default function Intro() {
+  const { contactRef } = useScroll()
+
+  const handleScroll = () => {
+    if (contactRef.current) {
+      contactRef.current.scrollIntoView({
+        behavior: 'smooth'
+      })
+    }
+  }
   return (
     <>
       <BannerMobile />
@@ -58,7 +68,10 @@ export default function Intro() {
           </div>
 
           <div className='flex justify-center'>
-            <button className='py-2 px-3 bg-u-orange-primary-500 text-white select-none rounded text-center hover:bg-u-orange-primary-700 uppercase font-semibold'>
+            <button
+              className='py-2 px-3 bg-u-orange-primary-500 text-white select-none rounded text-center hover:bg-u-orange-primary-700 uppercase font-semibold'
+              onClick={handleScroll}
+            >
               Postula Aquí
             </button>
           </div>
