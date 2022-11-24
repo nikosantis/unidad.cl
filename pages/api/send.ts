@@ -35,6 +35,16 @@ export default async function handler(
   }
   const body = req.body as BodyType
   try {
+    await prisma.contact.create({
+      data: {
+        first_name: body.firstname,
+        last_name: body.lastname,
+        phone: body.phone,
+        email: body.email,
+        form: body.form,
+        comment: body.comments
+      }
+    })
     const result = await sendgrid.send({
       to: mailTo,
       from: mailFrom,
@@ -49,18 +59,12 @@ export default async function handler(
       }
     })
     if (result && result[0]) {
-      await prisma.contact.create({
-        data: {
-          first_name: body.firstname,
-          last_name: body.lastname,
-          phone: body.phone,
-          email: body.email,
-          form: body.form,
-          comment: body.comments
-        }
-      })
       return res.status(200).json({
         message: 'Message sent'
+      })
+    } else {
+      return res.status(400).json({
+        message: 'Error sending the message'
       })
     }
   } catch (err) {

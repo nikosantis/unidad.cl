@@ -38,8 +38,8 @@ export default function Alert() {
             className='p-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800'
             role='alert'
           >
-            <span className='font-medium mr-1'>¡Formulario enviado!</span>Pronto
-            nos contactaremos con usted.
+            <span className='font-medium mr-1'>¡Formulario enviado!</span>Nos
+            contactaremos a partir del <strong>10 de enero</strong>
           </div>
         </div>
       </Transition>

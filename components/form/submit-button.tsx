@@ -11,7 +11,8 @@ export default function SubmitButton() {
       disabled={!isFormValid || isLoading}
       className={clsx(
         'py-2 px-3 bg-u-orange-primary-500 text-white select-none rounded font-medium text-center transition-all hover:bg-u-orange-primary-700',
-        'disabled:cursor-not-allowed disabled:select-none disabled:bg-u-orange-primary-500/40 disabled:pointer-events-none'
+        'disabled:cursor-not-allowed disabled:select-none disabled:bg-u-orange-primary-500/40 disabled:pointer-events-none',
+        'inline-flex'
       )}
       form='contact-form'
     >

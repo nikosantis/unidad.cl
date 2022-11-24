@@ -35,9 +35,9 @@ export default function Navbar() {
                         target={'_blank'}
                         rel='noreferrer'
                         className={clsx(
-                          'p-2 uppercase',
+                          'py-2 px-3 uppercase transition-all',
                           isActive
-                            ? 'font-semibold'
+                            ? 'text-zinc-700 decoration-1'
                             : 'text-zinc-500 font-normal',
                           'hover:text-slate-700'
                         )}
@@ -52,9 +52,9 @@ export default function Navbar() {
                       title={x.title}
                       key={x.id}
                       className={clsx(
-                        'p-2 uppercase',
+                        'py-2 px-3 uppercase transition-all',
                         isActive
-                          ? 'font-semibold'
+                          ? 'text-zinc-700 underline decoration-[3px] underline-offset-4 decoration-u-orange-primary-500'
                           : 'text-zinc-500 font-normal',
                         'hover:text-slate-700'
                       )}
