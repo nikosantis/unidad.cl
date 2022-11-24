@@ -11,6 +11,7 @@ type ContactProps = {
 
 export default function Contact({ form, bg }: ContactProps) {
   const { contactRef } = useScroll()
+  const isFormation = form === 'Formación Técnica'
   return (
     <section className={clsx('py-24 relative', bg)} ref={contactRef}>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
@@ -37,16 +38,19 @@ export default function Contact({ form, bg }: ContactProps) {
               email='melissa.diaz@usach.cl'
               phone='+56 9 6164 0345'
             />
-
-            <p className='mb-4 text-center lg:text-left mt-6'>
-              Para aquellos postulantes que hayan llenado su formulario durante
-              el período de Noviembre a Diciembre se les contactará a través de
-              correo a partir del 10 de Enero para que puedan asistir por vía
-              zoom a una entrevista.
-            </p>
-            <p className='mb-4 text-center lg:text-left'>
-              Agradeceremos estar atentos a sus correos.
-            </p>
+            {isFormation && (
+              <>
+                <p className='mb-4 text-center lg:text-left mt-6'>
+                  Para aquellos postulantes que hayan llenado su formulario
+                  durante el período de Noviembre a Diciembre se les contactará
+                  a través de correo a partir del 10 de Enero para que puedan
+                  asistir por vía zoom a una entrevista.
+                </p>
+                <p className='mb-4 text-center lg:text-left'>
+                  Agradeceremos estar atentos a sus correos.
+                </p>
+              </>
+            )}
           </div>
 
           <div className='w-full lg:w-6/12 lg:pl-3'>
