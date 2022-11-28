@@ -47,14 +47,8 @@ export default function Info() {
         <div className='bg-slate-50 rounded-lg p-8 w-full mb-2'>
           <h4 className='font-bold mb-2 text-xl'>Procedimiento de Selección</h4>
           <p>Entrevista personal</p>
-          <p>Examen de Admisión*</p>
+          <p>Examen de Admisión</p>
         </div>
-        <p>
-          <small>
-            *Una vez realizada la entrevista, los resultados se informarán vía
-            correo en Enero 2023
-          </small>
-        </p>
       </div>
     </div>
   )

@@ -69,6 +69,7 @@ export default async function handler(
     }
   } catch (err) {
     const error = err as Error
-    return res.status(500).json({ error: error.message })
+    console.error(error)
+    return res.status(500).json({ message: 'Error sending the message' })
   }
 }
