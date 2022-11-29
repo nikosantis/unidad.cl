@@ -5,8 +5,10 @@ specifiers:
   '@next/font': 13.0.5
   '@prisma/client': 4.6.1
   '@tailwindcss/forms': 0.5.3
+  '@tanstack/react-table': ^8.7.0
   '@types/node': 18.11.9
   '@types/react': 18.0.25
+  '@types/react-csv': ^1.1.3
   '@types/react-dom': 18.0.9
   autoprefixer: 10.4.13
   clsx: 1.2.1
@@ -21,6 +23,7 @@ specifiers:
   prettier: 2.8.0
   prisma: 4.6.1
   react: 18.2.0
+  react-csv: ^2.2.2
   react-dom: 18.2.0
   react-icons: 4.6.0
   swr: ^1.3.0
@@ -33,6 +36,7 @@ dependencies:
   '@next/font': 13.0.5
   '@prisma/client': 4.6.1_prisma@4.6.1
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.4
+  '@tanstack/react-table': 8.7.0_biqbaboplfbrettd7655fr4n2y
   '@types/node': 18.11.9
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.9
@@ -43,6 +47,7 @@ dependencies:
   next-auth: 4.17.0_7iuvftg57tblwyxclfkwku5xo4
   next-recaptcha-v3: 1.0.5_7iuvftg57tblwyxclfkwku5xo4
   react: 18.2.0
+  react-csv: 2.2.2
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.6.0_react@18.2.0
   swr: 1.3.0_react@18.2.0
@@ -50,6 +55,7 @@ dependencies:
   zod: 3.19.1
 
 devDependencies:
+  '@types/react-csv': 1.1.3
   autoprefixer: 10.4.13_postcss@8.4.19
   dotenv-cli: 6.0.0
   eslint-config-prettier: 8.5.0_eslint@8.28.0
@@ -326,6 +332,23 @@ packages:
       tailwindcss: 3.2.4_postcss@8.4.19
     dev: false
 
+  /@tanstack/react-table/8.7.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-VJ+9rsymDLaSU35rWOfX0bwNXnpW1i+T14wi+sHx8lxwAsfg6IY1Yw7FPfGADvUFP5eQn2t4nlohAJd+IoEj/Q==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      '@tanstack/table-core': 8.7.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@tanstack/table-core/8.7.0:
+    resolution: {integrity: sha512-DRiRbOAmDHapzUBd4/C4Yy+FTug4fdGp5sdZWWfCq4wxRoaXQraQgbzmK23a3QcbwLFtLeNezPkZrqbJWuX+VA==}
+    engines: {node: '>=12'}
+    dev: false
+
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: false
@@ -336,7 +359,12 @@ packages:
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
-    dev: false
+
+  /@types/react-csv/1.1.3:
+    resolution: {integrity: sha512-dkEdyRvRpygSnNg4cyzYWSUjukIQ5lAtXJwc7BqyUfzww/Cv2dcAFGYd+sWTFpGiDNZMVPp6vVPLcAPvJID8Kg==}
+    dependencies:
+      '@types/react': 18.0.25
+    dev: true
 
   /@types/react-dom/18.0.9:
     resolution: {integrity: sha512-qnVvHxASt/H7i+XG1U1xMiY5t+IHcPGUK7TDMDzom08xa7e86eCeKOiLZezwCKVxJn6NEiiy2ekgX8aQssjIKg==}
@@ -350,11 +378,9 @@ packages:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
       csstype: 3.1.1
-    dev: false
 
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
-    dev: false
 
   /@typescript-eslint/parser/5.43.0_hsf322ms6xhhd4b5ne6lb74y4a:
     resolution: {integrity: sha512-2iHUK2Lh7PwNUlhFxxLI2haSDNyXvebBO9izhjhMoDC+S3XI9qt2DGFUsiJ89m2k7gGYch2aEpYqV5F/+nwZug==}
@@ -665,7 +691,6 @@ packages:
 
   /csstype/3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
-    dev: false
 
   /damerau-levenshtein/1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
@@ -1993,6 +2018,10 @@ packages:
   /quick-lru/5.1.1:
     resolution: {integrity: sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==}
     engines: {node: '>=10'}
+
+  /react-csv/2.2.2:
+    resolution: {integrity: sha512-RG5hOcZKZFigIGE8LxIEV/OgS1vigFQT4EkaHeKgyuCbUAu9Nbd/1RYq++bJcJJ9VOqO/n9TZRADsXNDR4VEpw==}
+    dev: false
 
   /react-dom/18.2.0_react@18.2.0:
     resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
