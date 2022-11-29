@@ -7,15 +7,20 @@ import {
   SyntheticEvent,
   useContext
 } from 'react'
+import Script from 'next/script'
+import { useReCaptcha } from 'next-recaptcha-v3'
 
 import { formSchema } from 'lib/schemas/contact-form-schema'
 import { pushEvent } from 'lib/gtm'
+
+const reCaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
 
 interface FormContext {
   isFormValid: boolean
   isLoading: boolean
   isSuccess: boolean
   isError: boolean
+  isExist: boolean
   errorMsg: string | null
 }
 
@@ -43,6 +48,7 @@ export default function FormSubmit({ children, form }: FormSubmitProps) {
   const [isLoading, setLoading] = useState(false)
   const [isSuccess, setSuccess] = useState(false)
   const [isError, setIsError] = useState(false)
+  const [isExist, setIsExist] = useState(false)
   const [errorMsg, setError] = useState<string | null>(null)
   const formRef = useRef<HTMLFormElement>(null)
 
@@ -73,28 +79,46 @@ export default function FormSubmit({ children, form }: FormSubmitProps) {
         setSuccess(false)
         setIsError(false)
         setLoading(true)
-        const response = await fetch('/api/send', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            firstname: targets.firstname.value,
-            lastname: targets.lastname.value,
-            email: targets.email.value,
-            phone: targets.phone.value,
-            comments: targets.comments.value,
-            form: `Formulario ${form}`
-          })
-        })
-        const resJson = await response.json()
-        if (response.ok && resJson) {
-          setSuccess(true)
-          setLoading(false)
-          pushEvent('submitOk', {
-            form: `Formulario ${form}`
+        setIsExist(false)
+        if (window && window.grecaptcha) {
+          window.grecaptcha.ready(() => {
+            window.grecaptcha
+              .execute(reCaptchaKey, { action: 'submit' })
+              .then(async token => {
+                const response = await fetch('/api/send', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify({
+                    firstname: targets.firstname.value,
+                    lastname: targets.lastname.value,
+                    email: targets.email.value,
+                    phone: targets.phone.value,
+                    comments: targets.comments.value,
+                    form: `Formulario ${form}`,
+                    token
+                  })
+                })
+                const resJson = await response.json()
+                if (response.ok && resJson) {
+                  setSuccess(true)
+                  setLoading(false)
+                  pushEvent('submitOk', {
+                    form: `Formulario ${form}`
+                  })
+                } else if (resJson.message === 'Email exist') {
+                  setIsExist(true)
+                  setLoading(false)
+                } else {
+                  setIsError(true)
+                  setLoading(false)
+                  setError('Error al intentar enviar el formulario')
+                }
+              })
           })
         } else {
+          setIsError(true)
           setLoading(false)
           setError('Error al intentar enviar el formulario')
         }
@@ -115,8 +139,20 @@ export default function FormSubmit({ children, form }: FormSubmitProps) {
       ref={formRef}
       className='transition-all'
     >
+      <Script
+        src={`https://www.google.com/recaptcha/api.js?render=${reCaptchaKey}`}
+        strategy='lazyOnload'
+      />
+
       <FormContext.Provider
-        value={{ isFormValid, isLoading, errorMsg, isSuccess, isError }}
+        value={{
+          isFormValid,
+          isLoading,
+          errorMsg,
+          isSuccess,
+          isError,
+          isExist
+        }}
       >
         {children}
       </FormContext.Provider>

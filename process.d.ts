@@ -13,5 +13,8 @@ declare namespace NodeJS {
     AUTH0_ISSUER: string
     NEXTAUTH_URL: string
     NEXTAUTH_SECRET: string
+
+    NEXT_PUBLIC_RECAPTCHA_SITE_KEY: string
+    RECAPTCHA_SITE_SECRET: string
   }
 }

@@ -4,7 +4,20 @@ import { Transition } from '@headlessui/react'
 import { useFormContext } from './form-submit'
 
 export default function Alert() {
-  const { isError, isSuccess } = useFormContext()
+  const { isError, isSuccess, isExist } = useFormContext()
+  if (isExist) {
+    return (
+      <div className='w-full mt-6'>
+        <div
+          className='p-4 mb-4 text-sm text-yellow-700 bg-yellow-100 rounded-lg dark:bg-yellow-200 dark:text-yellow-800'
+          role='alert'
+        >
+          <span className='font-medium mr-1'>¡Ya estás registrado!</span>
+          Nos contactaremos a partir del <strong>10 de enero</strong>
+        </div>
+      </div>
+    )
+  }
   if (isError) {
     return (
       <div className='w-full mt-6'>
