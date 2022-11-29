@@ -1,11 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import sendgrid from '@sendgrid/mail'
 
 import prisma from 'lib/prisma'
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
+const EMAIL_URL = 'https://api.sendinblue.com/v3/smtp/email'
 
-const mailFrom = 'unidadclusach@gmail.com'
 const mailTo = 'claudia.miranda.z@usach.cl'
 
 type BodyType = {
@@ -45,20 +43,33 @@ export default async function handler(
         comment: body.comments
       }
     })
-    const result = await sendgrid.send({
-      to: mailTo,
-      from: mailFrom,
-      templateId: 'd-ac3313fa082f4d8b92e1fa3449d2e181',
-      dynamicTemplateData: {
+    const emailBody = {
+      to: [
+        {
+          email: mailTo
+        }
+      ],
+      templateId: 1,
+      params: {
         formName: body.form,
-        firstname: body.firstname,
-        lastname: body.lastname,
-        email: body.email,
-        phone: body.phone,
-        message: body.comments
+        formFirstname: body.firstname,
+        formLastname: body.lastname,
+        formEmail: body.email,
+        formPhone: body.phone,
+        formMessage: body.comments
       }
+    }
+    const emailResult = await fetch(EMAIL_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'api-key': process.env.SENDINBLUE_API_KEY
+      },
+      body: JSON.stringify(emailBody)
     })
-    if (result && result[0]) {
+    const emailJson = await emailResult.json()
+
+    if (emailResult.ok && emailJson.messageId) {
       return res.status(200).json({
         message: 'Message sent'
       })

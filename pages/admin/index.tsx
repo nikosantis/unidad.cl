@@ -21,7 +21,7 @@ export default function AdminIndexPage() {
             <h1 className='text-xl font-bold mb-4 text-white'>
               Unidad.cl Admin
             </h1>
-            <a
+            {/* <a
               href='/api/auth/signin'
               onClick={e => {
                 e.preventDefault()
@@ -30,7 +30,7 @@ export default function AdminIndexPage() {
               className='py-2 px-3 bg-u-orange-primary-500 text-white select-none rounded font-medium text-center hover:bg-u-orange-primary-700 inline-flex items-center'
             >
               Iniciar Sesión
-            </a>
+            </a> */}
           </div>
         </div>
       </main>

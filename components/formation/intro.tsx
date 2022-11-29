@@ -44,7 +44,7 @@ export default function Intro() {
                 <CgCheckO className='text-u-orange-primary-500' size='25' />
               </div>
               <div>
-                <span className='text-xl'>No se requiere PDT/ PSU</span>
+                <span className='text-xl'>No se requiere PAES/PDT/PSU</span>
               </div>
             </div>
 

@@ -1,8 +1,10 @@
 declare namespace NodeJS {
   export interface ProcessEnv {
     DATABASE_URL: string
-    SENDGRID_API_KEY: string
     TOKEN_SECRET: string
+
+    SENDGRID_API_KEY: string
+    SENDINBLUE_API_KEY: string
 
     NEXT_PUBLIC_GTM_ID: string
 
