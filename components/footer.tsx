@@ -48,13 +48,6 @@ export default function Footer() {
               >
                 melissa.diaz@usach.cl
               </a>
-              <br />
-              <a
-                href='mailto:jenniffer.ferrada@usach.cl'
-                className='hover:text-slate-300'
-              >
-                jenniffer.ferrada@usach.cl
-              </a>
             </p>
           </div>
         </div>

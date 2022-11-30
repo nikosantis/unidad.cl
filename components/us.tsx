@@ -12,9 +12,7 @@ export default function Us() {
           src={avatar1}
           name='Prof. Dr. Humberto Guajardo Sáinz'
           title='Director'
-          content='Médico Psiquiatra. Director de Postgrado de la Facultad de
-                Ciencias Médicas de la Universidad de Santiago. Prof. Titular de
-                Psiquiatría Facultad de Ciencias Médicas USACH'
+          content='Médico Psiquiatra. Decano de la Facultad de Ciencias Médicas de la Universidad de Santiago.'
         />
       </div>
 

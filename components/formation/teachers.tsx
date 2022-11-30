@@ -5,7 +5,7 @@ export default function Teachers() {
         <h5 className='font-semibold mb-2'>Psicopatología:</h5>
         <h4 className='font-bold mb-2'>Prof. Dr. Humberto Guajardo Sáinz</h4>
         <p>
-          Médico Psiquiatra. Decano Facultad de Ciencias Médicas de la
+          Médico Psiquiatra. Decano de la Facultad de Ciencias Médicas de la
           Universidad de Santiago.
         </p>
       </div>
