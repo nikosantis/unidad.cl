@@ -9,7 +9,7 @@ export default function Diplomat() {
         <div className='flex flex-col'>
           <div className='w-full lg:w-7/12 text-center lg:text-left'>
             <h5 className='text-zinc-700 font-light uppercase relative text-xl mb-2'>
-              Diplomado Clínico Internacional
+              Diplomado Clínico
             </h5>
             <h3 className='uppercase text-u-blue-500 font-semibold relative text-2xl lg:text-3xl xl:text-4xl mb-2'>
               Psicoterapia para el Tratamiento de abuso de alcohol y drogas
@@ -34,7 +34,7 @@ export default function Diplomat() {
           <Image
             src={diplomadoImg}
             placeholder='blur'
-            alt='Diplomado Clínico Internacional'
+            alt='Diplomado Clínico'
             fill
             sizes='(max-width: 768px) 100vw,
             (max-width: 1200px) 50vw,
