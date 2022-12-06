@@ -26,7 +26,7 @@ export default function Navbar() {
               <div className='hidden lg:flex lg:gap-1 lg:items-center lg:justify-end'>
                 {navigation.map(x => {
                   const isActive = x.url === router.asPath
-                  if (x.title === 'Diplomado') {
+                  if (x.title === 'Diplomado' || x.title === 'Tratamientos') {
                     return (
                       <a
                         href={x.url}
@@ -71,7 +71,7 @@ export default function Navbar() {
           <MobileNav>
             {navigation.map(x => {
               const isActive = x.url === router.asPath
-              if (x.title === 'Diplomado') {
+              if (x.title === 'Diplomado' || x.title === 'Tratamientos') {
                 return (
                   <a
                     href={x.url}

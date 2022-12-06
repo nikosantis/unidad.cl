@@ -16,7 +16,7 @@ export const navigation = [
   },
   {
     id: 4,
-    url: '/tratamientos',
+    url: 'https://www.ciad.cl/',
     title: 'Tratamientos'
   },
   {
