@@ -23,10 +23,11 @@ export default function Teachers() {
         <h5 className='font-semibold mb-2'>
           Prevención en el Ámbito Escolar y Laboral:
         </h5>
-        <h4 className='font-bold mb-2'>Sr. René Donoso</h4>
+        <h4 className='font-bold mb-2'>Sr. René Donoso Sereño</h4>
         <p>
-          Profesor de Estado. Jefe Depto. Extraescolar y Programas Formativos
-          Complementarios del Ministerio de Educación.
+          Profesor de Estado (PUC). Maestría en Ciencias Sociales (UAHC).
+          Diplomado en alta dirección de Educación (U de Chile- fcfm). DEA en
+          Psicología y Educación (UGR-España /UCEN -Chile).
         </p>
       </div>
 
