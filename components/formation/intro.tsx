@@ -68,12 +68,9 @@ export default function Intro() {
           </div>
 
           <div className='flex justify-center'>
-            <button
-              className='py-2 px-3 bg-u-orange-primary-500 text-white select-none rounded text-center hover:bg-u-orange-primary-700 uppercase font-semibold'
-              onClick={handleScroll}
-            >
-              Postula Aquí
-            </button>
+            <p className='text-lg font-bold'>
+              Periodo de Postulación e Ingreso CERRADO
+            </p>
           </div>
         </div>
       </div>

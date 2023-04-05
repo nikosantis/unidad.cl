@@ -1,4 +1,4 @@
-import { Roboto_Flex } from '@next/font/google'
+import { Roboto_Flex } from 'next/font/google'
 import clsx from 'clsx'
 
 import Seo, { CustomMetaType } from 'components/seo'

@@ -135,7 +135,7 @@ export default function IndexPage() {
           </div>
         </section>
 
-        <Contact form='Formación Técnica' />
+        <Contact form='Formación Técnica' isTechNotActive />
       </main>
     </RootLayout>
   )
